@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo.owl" uri="file:/Users/adrien/Documents/rennes%20a%20reclasser/ontology/CVO/bfo.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1459363573526" name="http://purl.obolibrary.org/obo/CVDO" uri="cvdo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1459363573526" name="http://purl.obolibrary.org/obo/cvdo/external/doid_import.owl" uri="cvdo_doid_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1459363573526" name="http://purl.obolibrary.org/obo/cvdo/external/fma_import.owl" uri="cvdo_fma_import.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1459363573526" name="http://purl.obolibrary.org/obo/cvdo/external/ogms_import.owl" uri="cvdo_ogms_import.owl"/>
-    </group>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2014-05-03/bfo.owl" uri="src/imports/bfo.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/core-subset.owl" uri="src/imports/core-subset.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl" uri="src/imports/bfo_classes_only.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/cvdo/external/ogms_import.owl" uri="src/imports/cvdo_ogms_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/cvdo/external/fma_import.owl" uri="src/imports/cvdo_fma_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/cvdo/external/doid_import.owl" uri="src/imports/cvdo_doid_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/core-subset.owl" uri="src/imports/cvdo_doid_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/opmi.owl" uri="src/imports/cvdo_fma_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/omrse.owl" uri="src/imports/cvdo_ogms_import.owl"/>
 </catalog>

@@ -1,0 +1,2436 @@
+format-version: 1.2
+data-version: 2020-03-05
+remark: CVDO is an ontology of cardiovascular diseases structured on OBO foundry’s principle and based on BFO. CVDO reorganizes and completes DOID cardiovascular diseases following OGMS tripartite model of disease, and builds its taxonomy of diseases largely by automatic reasoning.
+import: http://purl.obolibrary.org/obo/bfo/2014-05-03/bfo.owl
+import: http://purl.obolibrary.org/obo/cvdo/external/doid_import.owl
+import: http://purl.obolibrary.org/obo/cvdo/external/fma_import.owl
+import: http://purl.obolibrary.org/obo/cvdo/external/ogms_import.owl
+ontology: cvdo
+property_value: http://purl.org/dc/elements/1.1/contributor "Adrien Barton" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Arnaud Rosier" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Jean-François Ethier" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Paul Fabry" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000016>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000020>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000023>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000039>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000043>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000044>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000045>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000046>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000047>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000061>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000062>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000063>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000064>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000065>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000072>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000077>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000080>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000081>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000082>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000088>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000092>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000093>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000094>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000097>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000111>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000139>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000140>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000143>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000148>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000153>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000154>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000156>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000160>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000162>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000163>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000166>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000168>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000169>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000170>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000171>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000172>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000173>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000175>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000181>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000184>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000186>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000187>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000189>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000191>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000196>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000210>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000214>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000216>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000217>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000223>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000224>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000231>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000238>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000239>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000248>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000262>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000274>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000277>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000294>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000296>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000298>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000299>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000301>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000304>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000306>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000307>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000308>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000309>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000310>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000311>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000312>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000313>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000314>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000315>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000316>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000317>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000318>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000319>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000320>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000321>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000322>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000323>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000324>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000325>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000326>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000332>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000333>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000403>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000404>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000405>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000406>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000407>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000408>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000409>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000410>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000411>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000412>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000418>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000420>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000421>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000422>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000423>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000424>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000426>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000427>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000436>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000437>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000439>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000441>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000442>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000443>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000444>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000445>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000447>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000448>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000449>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000450>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000453>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000454>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000455>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000456>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000457>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000458>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000459>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000463>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000470>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000471>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000475>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000477>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000479>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000480>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000481>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000484>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000485>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000486>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000487>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000489>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000490>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000493>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000495>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000496>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000499>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000500>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000501>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000502>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000503>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000504>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000505>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000506>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000507>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000508>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000510>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000511>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000512>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000530>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000534>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000535>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000536>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000538>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000539>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000540>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000541>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000546>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000547>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000548>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000549>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000550>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000551>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000552>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000553>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000554>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000555>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000556>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000557>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000558>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000559>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000560>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000562>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000563>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000564>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000567>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000569>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000570>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000575>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000576>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000577>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000578>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000579>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000580>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000581>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000582>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000583>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000584>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000585>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000586>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000587>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000588>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000589>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000590>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000591>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CVDO_0000600>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0050431>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0050451>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0050700>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_0060068>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10128>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10230>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10272>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10273>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10314>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10392>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_10763>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11312>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_114>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11482>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_115>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11502>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11516>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11563>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_118>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11840>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_11984>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_12282>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_12326>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1287>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_12929>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_12930>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_13209>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_13884>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_14265>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1712>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1754>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_178>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1787>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1869>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1929>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_1936>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_2349>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_2868>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_326>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3363>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3393>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3394>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_384>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_3875>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_396>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_397>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4078>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4079>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4080>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_4372>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_519>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_520>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_5232>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_525>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_5644>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_57>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_5749>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_5805>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_5844>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_6000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_61>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_62>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_6420>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_820>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_8514>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_8515>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_8517>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_864>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_865>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_866>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_8805>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_8861>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_9651>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_9775>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_988>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/DOID_989>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_14333>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_18883>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_18884>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_3710>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_3734>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/FMA_50801>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000031>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000045>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000063>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000064>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000065>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000094>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000054>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000082>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000113>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000117>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000132>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000172>))\nDeclaration(AnnotationProperty(<http://purl.obolibrary.org/obo/CVDO_0000419>))\nDeclaration(AnnotationProperty(<http://purl.obolibrary.org/obo/CVDO_0000533>))\nDeclaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))\nDeclaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))\n############################\n#   Annotation Properties\n############################\n\n# Annotation Property: <http://purl.obolibrary.org/obo/CVDO_0000419> (CVDO definition)\n\nSubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/CVDO_0000419> <http://purl.obolibrary.org/obo/IAO_0000115>)\n\n# Annotation Property: <http://purl.obolibrary.org/obo/CVDO_0000533> (CVDO editor note)\n\nSubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/CVDO_0000533> <http://purl.obolibrary.org/obo/IAO_0000116>)\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000043> (atrioventricular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000043> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000312>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000044> (first degree atrioventricular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000044> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000317>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000045> (Mobitz I second degree atrioventricular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000045> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000315>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000046> (third degree atrioventricular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000046> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000318>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000061> (sinoatrial block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000061> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000314>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000062> (Mobitz I second degree sinoatrial block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000062> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000323>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000063> (Mobitz II second degree sinoatrial block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000063> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000324>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000064> (first degree sinoatrial block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000064> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000325>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000065> (third degree sinoatrial block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000065> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000326>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000072> (heart block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000072> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000311>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000080> (left posterior fascicular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000080> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000321>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000081> (infra-hisian block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000081> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000313>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000082> (left bundle branch block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000320>)))))\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000082> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000045> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000172> <http://purl.obolibrary.org/obo/CVDO_0000077>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000172> <http://purl.obolibrary.org/obo/CVDO_0000539>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000088> (cardiac arrhythmia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000088> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000310>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000092> (atrial fibrillation (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000092> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000093>)))))\nDisjointUnion(<http://purl.obolibrary.org/obo/CVDO_0000092> <http://purl.obolibrary.org/obo/CVDO_0000238> <http://purl.obolibrary.org/obo/CVDO_0000436> <http://purl.obolibrary.org/obo/CVDO_0000437>)\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000094> (atrial flutter (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000094> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000306>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000097> (common atrial flutter (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000097> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000449>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000139> (bradycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000139> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000140>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000143> (premature atrial contraction (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000143> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000309>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000153> (wandering pacemaker)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000153> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000310>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000154> (tricuspid valve disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000154> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000589>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000501>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000189> (heart valve stenosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000189> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000503>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000148>)))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000209> (heart valve insufficiency)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000209> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000210>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000148>)))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000231> (ischemic disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000231> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/DOID_326>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000262> (pericardium disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000262> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000040>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000023>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000296> (supraventricular tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000296> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000111>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000298> (left atrial flutter (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000298> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000447>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000299> (right atrial flutter (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000299> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000448>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000301> (junctional tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000301> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000308>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000304> (atrioventricular nodal reentrant tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000304> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000450>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000410> (inflammation process in an iliac vein)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000410> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CVDO_0000403> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/FMA_14333>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/FMA_18883>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/FMA_18884>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000426> (Barlow's syndrome)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000426> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000160>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000156>)))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000470> (tachycardia-bradycardia syndrome)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000093>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000471> (inappropriate sinus tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000471> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000457>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000475> (sinus bradycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000475> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000444>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000477> (tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000477> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000445>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000479> (sinoatrial arrest (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000479> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000443>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000480> (atrioventricular reciprocating tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000480> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000490>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000481> (ventricular tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000481> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000453>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000484> (ventricular flutter (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000484> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000456>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000485> (torsades de pointes (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000485> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000455>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000486> (monomorphic ventricular tachycardia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000486> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000454>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000487> (ventricular fibrillation (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000487> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000307>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000493> (premature contraction (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000493> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000439>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000495> (premature junctional contraction (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000495> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000441>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000496> (premature ventricular contraction (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000496> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000442>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000508> (coronary heart disease with stable angina)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000508> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_3393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000511>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000510> (angina pectoris)\n\nDisjointUnion(<http://purl.obolibrary.org/obo/CVDO_0000510> <http://purl.obolibrary.org/obo/CVDO_0000511> <http://purl.obolibrary.org/obo/CVDO_0000512>)\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000512> (unstable angina pectoris)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000512> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000132> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/DOID_8805>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000536> (ventricular preexcitation (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000536> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000458>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000538> (pulmonary valve prolapse)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000538> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000277>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000424>)))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000540> (ventricular tachyarrhythmia (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000540> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000489>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000546> (inflammatory disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000546> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000403>)))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000552> (endocardium disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000552> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000550>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000020>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000558> (ischemic cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000558> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000294>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000564> (disease of material anatomical entity)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000564> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000560>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000559>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000567> (valvular cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000567> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000065> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000294>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000332>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000504>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000577> (inflammatory dilated cardiomyopathy)\n\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000578> (hypertensive cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/CVDO_0000578> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000332>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000579> (congenital heart disease)\n\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000580> (heart ventricle disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000580> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000274>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000555>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000581> (left ventricle disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000581> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000575>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000553>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000582> (right ventricle disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000582> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000576>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000554>))))\n\n# Class: <http://purl.obolibrary.org/obo/CVDO_0000591> (myocardium disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/CVDO_0000591> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000547>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000248>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0050431> (arrhythmogenic right ventricular dysplasia)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_0050431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000418>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000584>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0050451> (Brugada syndrome)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_0050451> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000489>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0050700> (cardiomyopathy (1995 definition))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_0050700> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000583>)))))\nDisjointUnion(<http://purl.obolibrary.org/obo/DOID_0050700> <http://purl.obolibrary.org/obo/CVDO_0000569> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CVDO_0000579> <http://purl.obolibrary.org/obo/DOID_0050700>) ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_0050700> <http://purl.obolibrary.org/obo/DOID_11516>) ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_0050700> <http://purl.obolibrary.org/obo/DOID_3393>) ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_0050700> <http://purl.obolibrary.org/obo/DOID_4079>))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060000> (infective endocarditis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_0060000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000405>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_0060068> (non-bacterial thrombotic endocarditis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_0060068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000405>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_0060068> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000541>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10128> (venous insufficiency)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_10128> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000557>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10230> (aortic atherosclerosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_10230> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CVDO_0000224> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/FMA_3734>))))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10272> (left anterior fascicular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_10272> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000319>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10273> (heart conduction disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_10273> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000534>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000047>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10314> (endocarditis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_10314> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000405>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10392> (anomalous atrioventricular excitation (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_10392> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000535>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_10763> (hypertension)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_10763> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000196>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11312> (Mobitz II second degree atrioventricular block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_11312> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000316>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_114> (heart disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_114> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000039>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000015>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11482> (hemopericardium)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_11482> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000427>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_115> (cardiac tamponade)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_115> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000039>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11502> (mitral valve insufficiency)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_11502> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000166>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000499>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_11502> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000168>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11516> (hypertensive heart disease)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_11516> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000039>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11563> (retinal vasculitis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_11563> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000411>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_118> (pericardial effusion)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_118> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000427>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11840> (coronary artery vasospasm)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_11840> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_3393> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000600>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_11984> (hypertrophic cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_11984> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000332>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_12282> (femoral vein thrombophlebitis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_12282> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000409>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_12326> (chronic pulmonary heart disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_12326> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_8515> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000064> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000333>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1287> (cardiovascular system disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_1287> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000563>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000562>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_12929> (endocardial fibroelastosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_12929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000551>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_12930> (dilated cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_12930> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000294>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_13209> (right bundle branch block (disease))\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_13209> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000322>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_13884> (sick sinus syndrome)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_13884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000443>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000444>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_14265> (pulmonary valve insufficiency)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_14265> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000170>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000502>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_14265> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000169>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1712> (aortic valve stenosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_1712> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000504>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000500>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1712> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000187>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1754> (mitral valve stenosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_1754> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000505>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000499>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1754> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000181>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_178> (vascular disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_178> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000216>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000016>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1787> (pericarditis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1787> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000406>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1869> (chronic rheumatic pericarditis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1869> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_1787> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.obolibrary.org/obo/OGMS_0000064>)))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1929> (supravalvular aortic stenosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000187>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000504>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000548>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_1936> (atherosclerosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_1936> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000224>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_2349> (arteriosclerosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_2349> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000223>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_2868> (arterial occlusive disease)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_2868> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000216>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3363> (coronary arteriosclerosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_3363> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_2349> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000459>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3393> (coronary heart disease)\n\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3394> (ischemic heart disease)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_3394> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000039>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_3394> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000556>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_384> (Wolff-Parkinson-White syndrome)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_384> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_10273> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000458>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000490>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000463>)))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_3875> (thrombophlebitis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_3875> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000412>)))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_3875> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000217>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_396> (Loeffler endocarditis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_396> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000405>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_397> (restrictive cardiomyopathy)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_397> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000570>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000585>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4078> (tricuspid valve stenosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_4078> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000507>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000501>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_4078> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000184>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4079> (heart valve disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_4079> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000586>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000148>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4080> (tricuspid valve insufficiency)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_4080> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000171>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000501>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_4080> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000173>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_4372> (intracranial embolism)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_4372> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FMA_3710> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000082> <http://purl.obolibrary.org/obo/FMA_50801>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_519> (aortitis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_519> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000407>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_520> (aortic disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_520> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000548>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000549>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_5232> (aortic valve prolapse)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_5232> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000163>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000421>)))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_525> (central nervous system vasculitis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_525> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000408>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_5644> (tricuspid valve prolapse)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_5644> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000162>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000423>)))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_57> (aortic valve insufficiency)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_57> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000172>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000500>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_57> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000175>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_5749> (pulmonary valve disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_5749> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000590>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000502>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_5805> (subvalvular aortic stenosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_5805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000187>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_5805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000504>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_5805> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000575>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_5844> (myocardial infarction)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_5844> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000132> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/DOID_8805>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_6000> (congestive heart failure)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_6000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000191>))))\nDisjointUnion(<http://purl.obolibrary.org/obo/DOID_6000> <http://purl.obolibrary.org/obo/DOID_9651> <http://purl.obolibrary.org/obo/DOID_9775>)\n\n# Class: <http://purl.obolibrary.org/obo/DOID_61> (mitral valve disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_61> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000588>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000499>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_62> (aortic valve disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_62> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000587>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000500>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_6420> (pulmonary valve stenosis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_6420> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000506>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000502>)))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_6420> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000186>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_820> (myocarditis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_820> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000404>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_8514> (acute pulmonary heart disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_8514> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_8515> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000239>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_8515> (cor pulmonale)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_8515> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000239>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000333>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000584>))))\nDisjointUnion(<http://purl.obolibrary.org/obo/DOID_8515> <http://purl.obolibrary.org/obo/DOID_12326> <http://purl.obolibrary.org/obo/DOID_8514>)\n\n# Class: <http://purl.obolibrary.org/obo/DOID_8517> (acute cor pulmonale)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_8517> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/DOID_8515> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000239>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_864> (phlebitis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_864> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000412>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_865> (vasculitis)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_865> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000408>)))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_866> (vein disease)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_866> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000557>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000214>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_8861> (subvalvular pulmonary stenosis)\n\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_8861> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000186>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_8861> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000506>))))\nSubClassOf(<http://purl.obolibrary.org/obo/DOID_8861> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000576>))))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_988> (mitral valve prolapse)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_988> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000160>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000422>)))\n\n# Class: <http://purl.obolibrary.org/obo/DOID_989> (heart valve prolapse)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/DOID_989> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000031> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OGMS_0000063> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000117> <http://purl.obolibrary.org/obo/CVDO_0000530>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000113> <http://purl.obolibrary.org/obo/CVDO_0000420>)))\n\n\nDisjointClasses(<http://purl.obolibrary.org/obo/CVDO_0000577> <http://purl.obolibrary.org/obo/CVDO_0000579> <http://purl.obolibrary.org/obo/DOID_11516> <http://purl.obolibrary.org/obo/DOID_3393> <http://purl.obolibrary.org/obo/DOID_4079>)\nDisjointClasses(<http://purl.obolibrary.org/obo/CVDO_0000579> <http://purl.obolibrary.org/obo/DOID_0050431> <http://purl.obolibrary.org/obo/DOID_11516> <http://purl.obolibrary.org/obo/DOID_3393> <http://purl.obolibrary.org/obo/DOID_4079>)\nDisjointClasses(<http://purl.obolibrary.org/obo/CVDO_0000579> <http://purl.obolibrary.org/obo/DOID_11516> <http://purl.obolibrary.org/obo/DOID_11984> <http://purl.obolibrary.org/obo/DOID_12930> <http://purl.obolibrary.org/obo/DOID_3393> <http://purl.obolibrary.org/obo/DOID_397> <http://purl.obolibrary.org/obo/DOID_4079>)\n)
+
+[Term]
+id: CVDO:0000010
+name: bacterial endocarditis
+is_a: DOID:0060000 ! infective endocarditis
+property_value: CVDO:0000419 "An endocarditis caused by bacterial infection." xsd:string
+
+[Term]
+id: CVDO:0000011
+name: viral endocarditis
+is_a: DOID:0060000 ! infective endocarditis
+property_value: CVDO:0000419 "An endocarditis caused by viral infection." xsd:string
+
+[Term]
+id: CVDO:0000012
+name: fungal endocarditis
+is_a: DOID:0060000 ! infective endocarditis
+property_value: CVDO:0000419 "An endocarditis caused by fungal infection." xsd:string
+
+[Term]
+id: CVDO:0000015
+name: heart disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7088 ! located in at all times Heart
+property_value: CVDO:0000419 "A disorder located in the heart." xsd:string
+
+[Term]
+id: CVDO:0000016
+name: vascular disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:3710 ! located in at all times Vascular tree
+property_value: CVDO:0000419 "A disorder always located in a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000020
+name: endocardium disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7280 ! located in at all times Endocardium
+property_value: CVDO:0000419 "A disorder always located in the endocardium." xsd:string
+
+[Term]
+id: CVDO:0000023
+name: pericardium disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:9869 ! located in at all times Pericardium
+property_value: CVDO:0000419 "A disorder always located in the pericardium." xsd:string
+property_value: CVDO:0000533 "Since the pericardium is not a part of the heart according to FMA, pericardium disorder is not classified as a heart disorder." xsd:string
+
+[Term]
+id: CVDO:0000033
+name: infectious pericarditis
+is_a: DOID:1787 ! pericarditis
+property_value: CVDO:0000419 "A pericarditis caused by an infection." xsd:string
+
+[Term]
+id: CVDO:0000034
+name: bacterial pericarditis
+is_a: CVDO:0000033 ! infectious pericarditis
+property_value: CVDO:0000419 "A pericarditis caused by a bacterial infection." xsd:string
+
+[Term]
+id: CVDO:0000035
+name: viral pericarditis
+is_a: CVDO:0000033 ! infectious pericarditis
+property_value: CVDO:0000419 "A pericarditis caused by a viral infection." xsd:string
+
+[Term]
+id: CVDO:0000036
+name: fungal pericarditis
+is_a: CVDO:0000033 ! infectious pericarditis
+property_value: CVDO:0000419 "A pericarditis caused by a fungal infection." xsd:string
+
+[Term]
+id: CVDO:0000037
+name: protozoal pericarditis
+is_a: CVDO:0000033 ! infectious pericarditis
+
+[Term]
+id: CVDO:0000039
+name: heart pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+property_value: CVDO:0000419 "A pathological process involving or occuring in the heart." xsd:string
+
+[Term]
+id: CVDO:0000040
+name: pericardium pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:9869 ! occurs in Pericardium
+property_value: CVDO:0000419 "A pathological process involving or occuring in the pericardium." xsd:string
+
+[Term]
+id: CVDO:0000041
+name: acute pericarditis
+intersection_of: DOID:1787 ! pericarditis
+intersection_of: BFO:0000054 OGMS:0000094 ! realized in acute disease course
+property_value: CVDO:0000419 "A pericarditis that has an acute disease course." xsd:string
+
+[Term]
+id: CVDO:0000042
+name: chronic pericarditis
+intersection_of: DOID:1787 ! pericarditis
+intersection_of: BFO:0000054 OGMS:0000064 ! realized in chronic disease course
+property_value: CVDO:0000419 "A pericarditis that has a chronic disease course." xsd:string
+
+[Term]
+id: CVDO:0000043
+name: atrioventricular block (disease)
+relationship: BFO:0000113 CVDO:0000048 ! has material basis at all times impaired atrioventricular node
+
+[Term]
+id: CVDO:0000044
+name: first degree atrioventricular block (disease)
+
+[Term]
+id: CVDO:0000045
+name: Mobitz I second degree atrioventricular block (disease)
+
+[Term]
+id: CVDO:0000046
+name: third degree atrioventricular block (disease)
+synonym: "complete heart block" EXACT []
+
+[Term]
+id: CVDO:0000047
+name: heart conduction disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:83378 ! located in at all times Conducting tissue of heart
+property_value: CVDO:0000419 "A disorder always loacted in the conducting tissue of the heart." xsd:string
+
+[Term]
+id: CVDO:0000048
+name: impaired atrioventricular node
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000051
+name: impaired right branch of atrioventricular bundle
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000052
+name: bundle of Kent
+is_a: CVDO:0000463 ! atrioventricular accessory bundle
+
+[Term]
+id: CVDO:0000061
+name: sinoatrial block (disease)
+relationship: BFO:0000113 CVDO:0000066 ! has material basis at all times impaired sinoatrial node
+
+[Term]
+id: CVDO:0000062
+name: Mobitz I second degree sinoatrial block (disease)
+synonym: "Wenckebach block" EXACT []
+
+[Term]
+id: CVDO:0000063
+name: Mobitz II second degree sinoatrial block (disease)
+synonym: "sinus exit block" EXACT []
+
+[Term]
+id: CVDO:0000064
+name: first degree sinoatrial block (disease)
+
+[Term]
+id: CVDO:0000065
+name: third degree sinoatrial block (disease)
+
+[Term]
+id: CVDO:0000066
+name: impaired sinoatrial node
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000072
+name: heart block (disease)
+
+[Term]
+id: CVDO:0000077
+name: impaired posterior division of left branch of atrioventricular bundle
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000080
+name: left posterior fascicular block (disease)
+relationship: BFO:0000113 CVDO:0000077 ! has material basis at all times impaired posterior division of left branch of atrioventricular bundle
+
+[Term]
+id: CVDO:0000081
+name: infra-hisian block (disease)
+
+[Term]
+id: CVDO:0000082
+name: left bundle branch block (disease)
+
+[Term]
+id: CVDO:0000088
+name: cardiac arrhythmia (disease)
+property_value: CVDO:0000419 "A heart conduction disease characterized by cardiac arrhythmia processes." xsd:string
+property_value: CVDO:0000533 "Usual medical language does not differentiate the disease and the corresponding pathological process for the different kinds of cardiac arrhythmias. CVDO distinguishes them explicitly with the suffix '(disease)' or '(process)'." xsd:string
+
+[Term]
+id: CVDO:0000092
+name: atrial fibrillation (disease)
+
+[Term]
+id: CVDO:0000093
+name: atrial fibrillation (process)
+is_a: CVDO:0000111 ! supraventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000094
+name: atrial flutter (disease)
+
+[Term]
+id: CVDO:0000097
+name: common atrial flutter (disease)
+synonym: "cavotricuspid isthmus dependant macroreentry tachycardia" EXACT []
+synonym: "type I atrial flutter" EXACT []
+
+[Term]
+id: CVDO:0000110
+name: cardiac atrium fibrosis
+is_a: CVDO:0000273 ! cardiac atrium pathological process
+relationship: BFO:0000066 FMA:7099 ! occurs in Cardiac atrium
+property_value: CVDO:0000419 "A pathological process of fibrosis of the cardiac atrium." xsd:string
+
+[Term]
+id: CVDO:0000111
+name: supraventricular tachycardia (process)
+is_a: CVDO:0000445 ! tachycardia (process)
+
+[Term]
+id: CVDO:0000139
+name: bradycardia (disease)
+
+[Term]
+id: CVDO:0000140
+name: bradycardia (process)
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000143
+name: premature atrial contraction (disease)
+
+[Term]
+id: CVDO:0000144
+name: left anterior fascicle
+is_a: FMA:6266 ! Subdivision of conducting system of heart
+
+[Term]
+id: CVDO:0000148
+name: heart valve disorder
+def: "A disorder always located in a heart valve." []
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7110 ! located in at all times Cardiac valve
+
+[Term]
+id: CVDO:0000153
+name: wandering pacemaker
+is_a: DOID:10273 ! heart conduction disease
+
+[Term]
+id: CVDO:0000154
+name: tricuspid valve disease
+property_value: CVDO:0000419 "A disease affecting the tricuspid valve of the heart." xsd:string
+
+[Term]
+id: CVDO:0000156
+name: myxomatous degenerated structure in a mitral valve leaflet
+def: "A degenerated structure in a mitral valve leaflet due to myxomatous proliferation." []
+is_a: CVDO:0000420 ! degenerated structure in a heart valve leaflet
+relationship: BFO:0000082 FMA:7235 ! located in at all times Mitral valve
+
+[Term]
+id: CVDO:0000159
+name: heart pathological process involving a heart valve
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+intersection_of: BFO:0000167 FMA:7110 ! has participant at all times Cardiac valve
+property_value: CVDO:0000419 "A heart pathological process that has a heart valve as a participant." xsd:string
+property_value: CVDO:0000533 "This class should not be confused with 'heart valve pathological process', which are pathological processes occurring in a heart valve, rather than pathological process having as participant a heart valve." xsd:string
+
+[Term]
+id: CVDO:0000160
+name: mitral valve leaflet displacement into the left atrium during left ventricular systole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000524 ! part of occurrent left ventricular systole
+intersection_of: BFO:0000167 FMA:7235 ! has participant at all times Mitral valve
+
+[Term]
+id: CVDO:0000162
+name: tricuspid valve leaflet displacement into the right atrium during right ventricular systole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000525 ! part of occurrent right ventricular systole
+intersection_of: BFO:0000167 FMA:7234 ! has participant at all times Tricuspid valve
+
+[Term]
+id: CVDO:0000163
+name: aortic valve leaflet displacement into the left ventricle during left ventricular diastole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000522 ! part of occurrent left ventricular diastole
+intersection_of: BFO:0000167 FMA:7236 ! has participant at all times Aortic valve
+
+[Term]
+id: CVDO:0000164
+name: heart valve leaflet displacement into a cardiac chamber during ventricular systole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000518 ! part of occurrent ventricular systole
+
+[Term]
+id: CVDO:0000166
+name: mitral valve improper close during left ventricular systole
+intersection_of: CVDO:0000210 ! heart valve improper close
+intersection_of: BFO:0000132 CVDO:0000524 ! part of occurrent left ventricular systole
+intersection_of: BFO:0000167 FMA:7235 ! has participant at all times Mitral valve
+
+[Term]
+id: CVDO:0000168
+name: retrograd blood flow through mitral valve during left ventricular systole
+is_a: CVDO:0000182 ! retrograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000169
+name: retrograd blood flow through pulmonary valve during right ventricular diastole
+is_a: CVDO:0000182 ! retrograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000170
+name: pulmonary valve improper close during right ventricular diastole
+intersection_of: CVDO:0000210 ! heart valve improper close
+intersection_of: BFO:0000132 CVDO:0000523 ! part of occurrent right ventricular diastole
+intersection_of: BFO:0000167 FMA:7246 ! has participant at all times Pulmonary valve
+
+[Term]
+id: CVDO:0000171
+name: tricuspid valve improper close during right ventricular systole
+intersection_of: CVDO:0000210 ! heart valve improper close
+intersection_of: BFO:0000132 CVDO:0000525 ! part of occurrent right ventricular systole
+intersection_of: BFO:0000167 FMA:7234 ! has participant at all times Tricuspid valve
+
+[Term]
+id: CVDO:0000172
+name: aortic valve improper close during left ventricular diastole
+intersection_of: CVDO:0000210 ! heart valve improper close
+intersection_of: BFO:0000132 CVDO:0000522 ! part of occurrent left ventricular diastole
+intersection_of: BFO:0000167 FMA:7236 ! has participant at all times Aortic valve
+
+[Term]
+id: CVDO:0000173
+name: retrograd blood flow through tricuspid valve during right ventricular systole
+is_a: CVDO:0000182 ! retrograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000175
+name: retrograd blood flow through aortic valve during left ventricular diastole
+is_a: CVDO:0000182 ! retrograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000181
+name: disturbed anterograd blood flow through mitral valve during left ventricular diastole
+is_a: CVDO:0000183 ! disturbed anterograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000182
+name: retrograd blood flow through a heart valve
+is_a: CVDO:0000279 ! cardiac blood circulation pathological process
+
+[Term]
+id: CVDO:0000183
+name: disturbed anterograd blood flow through a heart valve
+is_a: CVDO:0000279 ! cardiac blood circulation pathological process
+
+[Term]
+id: CVDO:0000184
+name: disturbed anterograd blood flow through tricuspid valve during right ventricular diastole
+is_a: CVDO:0000183 ! disturbed anterograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000186
+name: disturbed anterograd blood flow through pulmonary valve during right ventricular systole
+is_a: CVDO:0000183 ! disturbed anterograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000187
+name: disturbed anterograd blood flow through aortic valve during left ventricular systole
+is_a: CVDO:0000183 ! disturbed anterograd blood flow through a heart valve
+
+[Term]
+id: CVDO:0000189
+name: heart valve stenosis
+property_value: CVDO:0000419 "A disease in which some disorder of a heart valve prevents it from opening properly, occasioning disturbance in the anterograd blood flow through the valve." xsd:string
+
+[Term]
+id: CVDO:0000191
+name: impaired cardiac output
+is_a: CVDO:0000279 ! cardiac blood circulation pathological process
+
+[Term]
+id: CVDO:0000193
+name: pressure
+is_a: BFO:0000019 ! quality
+
+[Term]
+id: CVDO:0000194
+name: blood pressure
+is_a: CVDO:0000193 ! pressure
+
+[Term]
+id: CVDO:0000196
+name: highly pressured arterial blood flow
+is_a: CVDO:0000280 ! vascular blood circulation pathological process
+property_value: CVDO:0000419 "A pathological process of highly pressured aerterial blood flow." xsd:string
+
+[Term]
+id: CVDO:0000209
+name: heart valve insufficiency
+property_value: CVDO:0000419 "A disease in which an abnormal structure in a heart valve prevents it to close propertly, occasioning a retrograd blood flow through the valve." xsd:string
+
+[Term]
+id: CVDO:0000210
+name: heart valve improper close
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:7088 ! occurs in Heart
+relationship: BFO:0000167 FMA:7110 ! has participant at all times Cardiac valve
+property_value: CVDO:0000419 "A pathological process of a heart valve closing improperly." xsd:string
+
+[Term]
+id: CVDO:0000214
+name: vein disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:14284 ! located in at all times Venous tree organ
+property_value: CVDO:0000419 "A disorder always located in a vein." xsd:string
+
+[Term]
+id: CVDO:0000216
+name: vascular pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+property_value: CVDO:0000419 "A pathological process involving or occuring in a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000217
+name: thrombosis
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+property_value: CVDO:0000419 "A pathological process of formation of a blood clot inside a blood vessel, obstructing the flow of blood." xsd:string
+
+[Term]
+id: CVDO:0000220
+name: deep vein thrombosis
+is_a: CVDO:0000217 ! thrombosis
+property_value: CVDO:0000419 "A thrombosis occurring in a deep vein." xsd:string
+
+[Term]
+id: CVDO:0000223
+name: artery hardening
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:45840 ! occurs in Arterial tree organ
+property_value: CVDO:0000419 "A pathological process of an artery hardening." xsd:string
+
+[Term]
+id: CVDO:0000224
+name: atheromous plaque formation in artery
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:50720 ! occurs in Artery
+property_value: CVDO:0000419 "A pathological process of formation of atheromous plaques in an artery." xsd:string
+
+[Term]
+id: CVDO:0000225
+name: embolism
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+relationship: BFO:0000167 CVDO:0000545 ! has participant at all times embolus
+property_value: CVDO:0000419 "A pathological process of lodging of an embolus in a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000226
+name: aneurysm (disorder)
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:3710 ! located in at all times Vascular tree
+property_value: CVDO:0000419 "A disorder of localized, blood-filled balloon-like bulge in the wall of a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000231
+name: ischemic disease
+
+[Term]
+id: CVDO:0000234
+name: compression disease
+is_a: DOID:178 ! vascular disease
+
+[Term]
+id: CVDO:0000238
+name: permanent atrial fibrillation
+is_a: CVDO:0000092 ! atrial fibrillation (disease)
+relationship: BFO:0000054 OGMS:0000064 ! realized in chronic disease course
+property_value: CVDO:0000419 "An atrial fibrillation disease that is characterized by an atrial fibrillation episode longer than 7 days which does not terminate by cardioversion." xsd:string
+
+[Term]
+id: CVDO:0000239
+name: right ventricular myocardium dilatation
+intersection_of: CVDO:0000330 ! ventricular myocardium dilatation
+intersection_of: BFO:0000066 FMA:9535 ! occurs in Myocardium of right ventricle
+property_value: CVDO:0000419 "A pathological process of dilatation of the myocardium of a right cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000240
+name: aneurysm rupture
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+relationship: BFO:0000167 CVDO:0000226 ! has participant at all times aneurysm (disorder)
+property_value: CVDO:0000419 "A pathological process of an aneurysm rupturing." xsd:string
+
+[Term]
+id: CVDO:0000248
+name: myocardium disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:9462 ! located in at all times Myocardium
+property_value: CVDO:0000419 "A disorder always located in the mycoardium." xsd:string
+
+[Term]
+id: CVDO:0000254
+name: Tako Tsubo cardiomyopathy
+is_a: DOID:0050700 ! cardiomyopathy (1995 definition)
+relationship: BFO:0000054 OGMS:0000066 ! realized in transient disease course
+property_value: CVDO:0000419 "A cardiomyopathy whose etiological process includes a stressful or emotional situation, characterized by transient ventricular apical wall motion abnormalities (ballooning)." xsd:string
+property_value: CVDO:0000533 "Tako-Tsubo cardiomyopathy is not a dilated cardiomyopathy in Elliott et al.'s (2008) classification." xsd:string
+
+[Term]
+id: CVDO:0000255
+name: left ventricular noncompaction
+synonym: "noncompaction cardiomyopathy" EXACT []
+is_a: CVDO:0000569 ! cardiomyopathy (2008 definition)
+property_value: CVDO:0000419 "\"A cardiomyopathy characterized by prominent left ventricular trabeculae and deep inter-trabecular recesses. The myocardial wall is often thickened with a thin, compacted epicardial layer and a thickened endocardial layer.\" (Elliott et al., 2008)" xsd:string
+
+[Term]
+id: CVDO:0000256
+name: genetic hypertrophic cardiomyopathy
+intersection_of: DOID:11984 ! hypertrophic cardiomyopathy
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A hypertrophic cardiomyopathy that has a genetic origin." xsd:string
+
+[Term]
+id: CVDO:0000262
+name: pericardium disease
+property_value: CVDO:0000419 "A disease affecting the pericardium." xsd:string
+property_value: CVDO:0000533 "Since pericardium is not a part of heart according to FMA, pericardium disease is not classified as a heart disease." xsd:string
+
+[Term]
+id: CVDO:0000267
+name: vascular disease - unclassified by CVDO
+is_a: DOID:178 ! vascular disease
+property_value: CVDO:0000533 "This is a dummy class not intended to be included in CVDO's final version, used to store temporarily DOID's vascular diseases that may be reclassified in the future." xsd:string
+
+[Term]
+id: CVDO:0000273
+name: cardiac atrium pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7099 ! occurs in Cardiac atrium
+property_value: CVDO:0000419 "A pathological process occuring in a cardiac atrium." xsd:string
+
+[Term]
+id: CVDO:0000274
+name: cardiac ventricle pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7100 ! occurs in Cardiac ventricle
+property_value: CVDO:0000419 "A pathological process occurring in a cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000275
+name: thromboembolism
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+relationship: BFO:0000117 CVDO:0000217 ! has occurrent part thrombosis
+relationship: BFO:0000117 CVDO:0000225 ! has occurrent part embolism
+property_value: CVDO:0000419 "A pathological process constituted by a thrombosis (creating a blood clot) and a subsequent embolism (involving the blood clot as the embolus)." xsd:string
+
+[Term]
+id: CVDO:0000276
+name: infarction
+is_a: OGMS:0000061 ! pathological bodily process
+property_value: CVDO:0000419 "A necrosis of a tissue caused by a local lack of oxygen, due to an obstruction of the tissue's blood supply." xsd:string
+
+[Term]
+id: CVDO:0000277
+name: pulmonary valve leaflet displacement into the right ventricle during right ventricular diastole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000523 ! part of occurrent right ventricular diastole
+intersection_of: BFO:0000167 FMA:7246 ! has participant at all times Pulmonary valve
+
+[Term]
+id: CVDO:0000279
+name: cardiac blood circulation pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:7088 ! occurs in Heart
+property_value: CVDO:0000419 "A pathological process involving the blood circuation in the heart." xsd:string
+
+[Term]
+id: CVDO:0000280
+name: vascular blood circulation pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+property_value: CVDO:0000419 "A pathological process involving the blood circulation in a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000281
+name: part of atrial myocardium with impaired conduction
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:9462 ! located in at all times Myocardium
+
+[Term]
+id: CVDO:0000284
+name: diabetic microangiopathy
+is_a: DOID:11713 ! diabetic angiopathy
+
+[Term]
+id: CVDO:0000285
+name: diabetic macroangiopathy
+is_a: DOID:11713 ! diabetic angiopathy
+
+[Term]
+id: CVDO:0000288
+name: atheromous plaque formation in coronary artery
+intersection_of: CVDO:0000224 ! atheromous plaque formation in artery
+intersection_of: BFO:0000066 FMA:49893 ! occurs in Coronary artery
+property_value: CVDO:0000419 "A pathological process consisting in the formation of atheromous plaques in a coronary artery. It may lead to a coronary stenosis." xsd:string
+
+[Term]
+id: CVDO:0000293
+name: atherosclerotic coronary heart disease
+intersection_of: DOID:3393 ! coronary heart disease
+intersection_of: BFO:0000113 DOID:4248 ! has material basis at all times coronary stenosis
+property_value: CVDO:0000419 "A coronary heart disease due to a coronary stenosis." xsd:string
+
+[Term]
+id: CVDO:0000294
+name: left ventricular myocardium dilatation
+intersection_of: CVDO:0000330 ! ventricular myocardium dilatation
+intersection_of: BFO:0000066 FMA:9558 ! occurs in Myocardium of left ventricle
+property_value: CVDO:0000419 "A pathological process of dilatation of the myocardium of a left cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000296
+name: supraventricular tachycardia (disease)
+
+[Term]
+id: CVDO:0000298
+name: left atrial flutter (disease)
+disjoint_from: CVDO:0000299 ! right atrial flutter (disease)
+
+[Term]
+id: CVDO:0000299
+name: right atrial flutter (disease)
+
+[Term]
+id: CVDO:0000301
+name: junctional tachycardia (disease)
+
+[Term]
+id: CVDO:0000304
+name: atrioventricular nodal reentrant tachycardia (disease)
+
+[Term]
+id: CVDO:0000306
+name: atrial flutter (process)
+is_a: CVDO:0000111 ! supraventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000307
+name: ventricular fibrillation (process)
+is_a: CVDO:0000489 ! ventricular tachyarrhythmia (process)
+
+[Term]
+id: CVDO:0000308
+name: junctional tachycardia (process)
+is_a: CVDO:0000111 ! supraventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000309
+name: premature atrial contraction (process)
+is_a: CVDO:0000439 ! premature contraction (process)
+
+[Term]
+id: CVDO:0000310
+name: cardiac arrhythmia (process)
+is_a: CVDO:0000534 ! heart conduction pathological process
+property_value: CVDO:0000419 "A pathological process involving the electrical activity of the heart." xsd:string
+
+[Term]
+id: CVDO:0000311
+name: heart block (process)
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000312
+name: atrioventricular block (process)
+is_a: CVDO:0000311 ! heart block (process)
+
+[Term]
+id: CVDO:0000313
+name: infra-hisian block (process)
+is_a: CVDO:0000311 ! heart block (process)
+
+[Term]
+id: CVDO:0000314
+name: sinoatrial block (process)
+is_a: CVDO:0000311 ! heart block (process)
+
+[Term]
+id: CVDO:0000315
+name: Mobitz I second degree atrioventricular block (process)
+is_a: CVDO:0000312 ! atrioventricular block (process)
+
+[Term]
+id: CVDO:0000316
+name: Mobitz II second degree atrioventricular block (process)
+is_a: CVDO:0000312 ! atrioventricular block (process)
+
+[Term]
+id: CVDO:0000317
+name: first degree atrioventricular block (process)
+is_a: CVDO:0000312 ! atrioventricular block (process)
+
+[Term]
+id: CVDO:0000318
+name: third degree atrioventricular block (process)
+is_a: CVDO:0000312 ! atrioventricular block (process)
+
+[Term]
+id: CVDO:0000319
+name: left anterior fascicular block (process)
+is_a: CVDO:0000313 ! infra-hisian block (process)
+
+[Term]
+id: CVDO:0000320
+name: left bundle branch block (process)
+is_a: CVDO:0000313 ! infra-hisian block (process)
+
+[Term]
+id: CVDO:0000321
+name: left posterior fascicular block (process)
+is_a: CVDO:0000313 ! infra-hisian block (process)
+
+[Term]
+id: CVDO:0000322
+name: right bundle branch block (process)
+is_a: CVDO:0000313 ! infra-hisian block (process)
+
+[Term]
+id: CVDO:0000323
+name: Mobitz I second degree sinoatrial block (process)
+is_a: CVDO:0000314 ! sinoatrial block (process)
+
+[Term]
+id: CVDO:0000324
+name: Mobitz II second degree sinoatrial block (process)
+is_a: CVDO:0000314 ! sinoatrial block (process)
+
+[Term]
+id: CVDO:0000325
+name: first degree sinoatrial block (process)
+is_a: CVDO:0000314 ! sinoatrial block (process)
+
+[Term]
+id: CVDO:0000326
+name: third degree sinoatrial block (process)
+is_a: CVDO:0000314 ! sinoatrial block (process)
+
+[Term]
+id: CVDO:0000327
+name: coronary artery disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:49893 ! located in at all times Coronary artery
+property_value: CVDO:0000419 "A disorder always located in a coronary artery." xsd:string
+
+[Term]
+id: CVDO:0000330
+name: ventricular myocardium dilatation
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:12151 ! occurs in Myocardium of ventricle
+property_value: CVDO:0000419 "A pathological process of dilatation of the myocardium of a cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000331
+name: ventricular myocardium hypertrophy
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:12151 ! occurs in Myocardium of ventricle
+property_value: CVDO:0000419 "A pathological process of hypertrophy of the myocardium of a cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000332
+name: left ventricular myocardium hypertrophy
+intersection_of: CVDO:0000331 ! ventricular myocardium hypertrophy
+intersection_of: BFO:0000066 FMA:9558 ! occurs in Myocardium of left ventricle
+property_value: CVDO:0000419 "A pathological process of hypertrophy of the myocardium of a left cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000333
+name: right ventricular myocardium hypertrophy
+intersection_of: CVDO:0000331 ! ventricular myocardium hypertrophy
+intersection_of: BFO:0000066 FMA:9535 ! occurs in Myocardium of right ventricle
+property_value: CVDO:0000419 "A pathological process of hypertrophy of the myocardium of a right cardiac ventricle." xsd:string
+
+[Term]
+id: CVDO:0000403
+name: pathological inflammation process
+is_a: OGMS:0000061 ! pathological bodily process
+property_value: CVDO:0000419 "A pathological process of an organ or part of organ getting inflamed." xsd:string
+
+[Term]
+id: CVDO:0000404
+name: inflammation process in a myocardium
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:9462 ! occurs in Myocardium
+property_value: CVDO:0000419 "An inflammation process occurring in the myocardium." xsd:string
+
+[Term]
+id: CVDO:0000405
+name: inflammation process in an endocardium
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:7280 ! occurs in Endocardium
+property_value: CVDO:0000419 "An inflammation process occurring in the endocardium." xsd:string
+
+[Term]
+id: CVDO:0000406
+name: inflammation process in a pericardium
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:9869 ! occurs in Pericardium
+property_value: CVDO:0000419 "An inflammation process occurring in the pericardium." xsd:string
+
+[Term]
+id: CVDO:0000407
+name: inflammation process in aorta
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:3734 ! occurs in Aorta
+property_value: CVDO:0000419 "An inflammation process occurring in the aorta." xsd:string
+
+[Term]
+id: CVDO:0000408
+name: inflammation process in a blood vessel
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+property_value: CVDO:0000419 "An inflammation process in a blood vessel." xsd:string
+
+[Term]
+id: CVDO:0000409
+name: inflammation process in a femoral vein
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:21185 ! occurs in Femoral vein
+property_value: CVDO:0000419 "An inflammation process occurring in the femoral vein." xsd:string
+
+[Term]
+id: CVDO:0000410
+name: inflammation process in an iliac vein
+property_value: CVDO:0000419 "An inflammation process occurring in an iliac vein." xsd:string
+
+[Term]
+id: CVDO:0000411
+name: inflammation process in a retinal artery
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:49879 ! occurs in Central retinal artery
+property_value: CVDO:0000419 "An inflammation of the retinal artery." xsd:string
+
+[Term]
+id: CVDO:0000412
+name: inflammation process in a vein
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:50723 ! occurs in Vein
+property_value: CVDO:0000419 "An inflammation process occurring in a vein." xsd:string
+
+[Term]
+id: CVDO:0000418
+name: fibrofatty replacement in a right ventricular myocardium
+comment: A pathological process of fibrofatty replacement in the myocardium of the right cardiac ventricle.
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:7098 ! occurs in Right ventricle
+relationship: BFO:0000167 FMA:9535 ! has participant at all times Myocardium of right ventricle
+
+[Term]
+id: CVDO:0000420
+name: degenerated structure in a heart valve leaflet
+def: "A disorder of degenerated structure in a heart valve leaflet." []
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:7110 ! located in at all times Cardiac valve
+
+[Term]
+id: CVDO:0000421
+name: degenerated structure in an aortic valve leaflet
+intersection_of: CVDO:0000420 ! degenerated structure in a heart valve leaflet
+intersection_of: BFO:0000082 FMA:7236 ! located in at all times Aortic valve
+property_value: CVDO:0000419 "A disorder of degenerated structure in an aortic valve leaflet." xsd:string
+
+[Term]
+id: CVDO:0000422
+name: degenerated structure in a mitral valve leaflet
+intersection_of: CVDO:0000420 ! degenerated structure in a heart valve leaflet
+intersection_of: BFO:0000082 FMA:7235 ! located in at all times Mitral valve
+property_value: CVDO:0000419 "A disorder of degenerated structure in a mitral valve leaflet." xsd:string
+
+[Term]
+id: CVDO:0000423
+name: degenerated structure in a tricuspid valve leaflet
+intersection_of: CVDO:0000420 ! degenerated structure in a heart valve leaflet
+intersection_of: BFO:0000082 FMA:7234 ! located in at all times Tricuspid valve
+property_value: CVDO:0000419 "A (clinically abnormal) degenerated structure in a tricuspid valve leaflet." xsd:string
+
+[Term]
+id: CVDO:0000424
+name: degenerated structure in a pulmonary valve leaflet
+intersection_of: CVDO:0000420 ! degenerated structure in a heart valve leaflet
+intersection_of: BFO:0000082 FMA:7246 ! located in at all times Pulmonary valve
+property_value: CVDO:0000419 "A disorder of degenerated structure in a pulmonary valve leaflet." xsd:string
+
+[Term]
+id: CVDO:0000426
+name: Barlow's syndrome
+property_value: CVDO:0000419 "A mitral valve prolapse due to myxomatous proliferation in the mitral valve." xsd:string
+
+[Term]
+id: CVDO:0000427
+name: fluid accumulation in the pericardial cavity
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:9869 ! occurs in Pericardium
+property_value: CVDO:0000419 "A pathological process consisting in the abnormal accumulation of fluid in the pericardial cavity." xsd:string
+property_value: CVDO:0000533 "A process of pericardial effusion leads to the disorder 'fluid in the pericardial cavity'." xsd:string
+
+[Term]
+id: CVDO:0000435
+name: atherosclerotic ischemic cardiomyopathy
+is_a: CVDO:0000558 ! ischemic cardiomyopathy
+relationship: BFO:0000113 DOID:4248 ! has material basis at all times coronary stenosis
+property_value: CVDO:0000419 "An ischemic cardiomyopathy due to coronary stenosis." xsd:string
+
+[Term]
+id: CVDO:0000436
+name: paroxysmal atrial fibrillation
+is_a: CVDO:0000092 ! atrial fibrillation (disease)
+property_value: CVDO:0000419 "An atrial fibrillation disease that is characterized by an atrial fibrillation episode shorter than 7 days." xsd:string
+
+[Term]
+id: CVDO:0000437
+name: persistent atrial fibrillation
+is_a: CVDO:0000092 ! atrial fibrillation (disease)
+property_value: CVDO:0000419 "An atrial fibrillation disease that is characterized by an atrial fibrillation episode longer than 7 days which does terminate by cardioversion." xsd:string
+
+[Term]
+id: CVDO:0000439
+name: premature contraction (process)
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000441
+name: premature junctional contraction (process)
+is_a: CVDO:0000439 ! premature contraction (process)
+
+[Term]
+id: CVDO:0000442
+name: premature ventricular contraction (process)
+is_a: CVDO:0000439 ! premature contraction (process)
+
+[Term]
+id: CVDO:0000443
+name: sinoatrial arrest (process)
+synonym: "sinus pause" EXACT []
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000444
+name: sinus bradycardia (process)
+is_a: CVDO:0000140 ! bradycardia (process)
+
+[Term]
+id: CVDO:0000445
+name: tachycardia (process)
+synonym: "tachyarrhythmia (process)" EXACT []
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000447
+name: left atrial flutter (process)
+is_a: CVDO:0000306 ! atrial flutter (process)
+
+[Term]
+id: CVDO:0000448
+name: right atrial flutter (process)
+is_a: CVDO:0000306 ! atrial flutter (process)
+
+[Term]
+id: CVDO:0000449
+name: common atrial flutter (process)
+is_a: CVDO:0000448 ! right atrial flutter (process)
+
+[Term]
+id: CVDO:0000450
+name: atrioventricular nodal reentrant tachycardia (process)
+is_a: CVDO:0000308 ! junctional tachycardia (process)
+
+[Term]
+id: CVDO:0000453
+name: ventricular tachycardia (process)
+is_a: CVDO:0000489 ! ventricular tachyarrhythmia (process)
+
+[Term]
+id: CVDO:0000454
+name: monomorphic ventricular tachycardia (process)
+is_a: CVDO:0000453 ! ventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000455
+name: torsades de pointes (process)
+is_a: CVDO:0000453 ! ventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000456
+name: ventricular flutter (process)
+is_a: CVDO:0000453 ! ventricular tachycardia (process)
+
+[Term]
+id: CVDO:0000457
+name: inappropriate sinus tachycardia (process)
+is_a: CVDO:0000445 ! tachycardia (process)
+
+[Term]
+id: CVDO:0000458
+name: ventricular preexcitation (process)
+is_a: CVDO:0000535 ! anomalous atrioventricular excitation (process)
+
+[Term]
+id: CVDO:0000459
+name: coronary artery hardening
+intersection_of: CVDO:0000223 ! artery hardening
+intersection_of: BFO:0000066 FMA:49893 ! occurs in Coronary artery
+property_value: CVDO:0000419 "A pathological process of a coronary artery hardening." xsd:string
+
+[Term]
+id: CVDO:0000462
+name: accessory bundle
+is_a: CVDO:0000015 ! heart disorder
+
+[Term]
+id: CVDO:0000463
+name: atrioventricular accessory bundle
+is_a: CVDO:0000462 ! accessory bundle
+property_value: CVDO:0000419 "Accessory bundle that connects the atrium to a ventricle outside of the regular atrioventricular conduction system." xsd:string
+
+[Term]
+id: CVDO:0000466
+name: impaired sinus node
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000470
+name: tachycardia-bradycardia syndrome
+def: "A sick sinus syndrome characterized by sinus pauses and/or bradycardia episodes alternating with sinus or atrial tachycardia episodes." []
+is_a: DOID:13884 ! sick sinus syndrome
+
+[Term]
+id: CVDO:0000471
+name: inappropriate sinus tachycardia (disease)
+
+[Term]
+id: CVDO:0000472
+name: cardiac channelopathy
+intersection_of: DOID:10273 ! heart conduction disease
+intersection_of: BFO:0000113 CVDO:0000537 ! has material basis at all times cardiac ion channels disorder
+property_value: CVDO:0000419 "A disease cause by a cardiac ion channel disorder." xsd:string
+
+[Term]
+id: CVDO:0000473
+name: long QT syndrome
+is_a: CVDO:0000472 ! cardiac channelopathy
+property_value: CVDO:0000419 "A cardiac channelopathy in which delayed repolarization of the heart following a heartbeat increases the risk of episodes of torsades de pointes. This is a rare disease." xsd:string
+
+[Term]
+id: CVDO:0000474
+name: genetic cardiac channelopathy
+intersection_of: CVDO:0000472 ! cardiac channelopathy
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A cardiac channelopathy that has a genetic origin." xsd:string
+
+[Term]
+id: CVDO:0000475
+name: sinus bradycardia (disease)
+
+[Term]
+id: CVDO:0000476
+name: left bundle branch block (process)
+is_a: CVDO:0000319 ! left anterior fascicular block (process)
+
+[Term]
+id: CVDO:0000477
+name: tachycardia (disease)
+synonym: "tachyarrhythmia (disease)" EXACT []
+
+[Term]
+id: CVDO:0000479
+name: sinoatrial arrest (disease)
+
+[Term]
+id: CVDO:0000480
+name: atrioventricular reciprocating tachycardia (disease)
+
+[Term]
+id: CVDO:0000481
+name: ventricular tachycardia (disease)
+
+[Term]
+id: CVDO:0000484
+name: ventricular flutter (disease)
+
+[Term]
+id: CVDO:0000485
+name: torsades de pointes (disease)
+
+[Term]
+id: CVDO:0000486
+name: monomorphic ventricular tachycardia (disease)
+
+[Term]
+id: CVDO:0000487
+name: ventricular fibrillation (disease)
+
+[Term]
+id: CVDO:0000489
+name: ventricular tachyarrhythmia (process)
+is_a: CVDO:0000445 ! tachycardia (process)
+
+[Term]
+id: CVDO:0000490
+name: atrioventricular reciprocating tachycardia (process)
+is_a: CVDO:0000308 ! junctional tachycardia (process)
+
+[Term]
+id: CVDO:0000493
+name: premature contraction (disease)
+
+[Term]
+id: CVDO:0000495
+name: premature junctional contraction (disease)
+
+[Term]
+id: CVDO:0000496
+name: premature ventricular contraction (disease)
+
+[Term]
+id: CVDO:0000497
+name: cardiac chamber pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7095 ! occurs in Cardiac chamber
+property_value: CVDO:0000419 "A pathological process occurring in a cardiac chamber." xsd:string
+
+[Term]
+id: CVDO:0000499
+name: mitral valve disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7235 ! located in at all times Mitral valve
+property_value: CVDO:0000419 "A disorder always located in the mitral valve." xsd:string
+
+[Term]
+id: CVDO:0000500
+name: aortic valve disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7236 ! located in at all times Aortic valve
+property_value: CVDO:0000419 "A disorder always located in the aortic valve." xsd:string
+
+[Term]
+id: CVDO:0000501
+name: tricuspid valve disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7234 ! located in at all times Tricuspid valve
+property_value: CVDO:0000419 "A disorder always located in the tricuspid valve." xsd:string
+
+[Term]
+id: CVDO:0000502
+name: pulmonary valve disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7246 ! located in at all times Pulmonary valve
+property_value: CVDO:0000419 "A disorder always located in the pulmonary valve." xsd:string
+
+[Term]
+id: CVDO:0000503
+name: heart valve improper opening
+def: "A pathological process of a heart valve improper opening." []
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:7088 ! occurs in Heart
+relationship: BFO:0000167 FMA:7110 ! has participant at all times Cardiac valve
+
+[Term]
+id: CVDO:0000504
+name: aortic valve improper opening during left ventricular systole
+intersection_of: CVDO:0000503 ! heart valve improper opening
+intersection_of: BFO:0000132 CVDO:0000524 ! part of occurrent left ventricular systole
+intersection_of: BFO:0000167 FMA:7236 ! has participant at all times Aortic valve
+
+[Term]
+id: CVDO:0000505
+name: mitral valve narrowed opening during left ventricular diastole
+intersection_of: CVDO:0000503 ! heart valve improper opening
+intersection_of: BFO:0000132 CVDO:0000522 ! part of occurrent left ventricular diastole
+intersection_of: BFO:0000167 FMA:7235 ! has participant at all times Mitral valve
+
+[Term]
+id: CVDO:0000506
+name: pulmonary valve narrowed opening during right ventricular systole
+intersection_of: CVDO:0000503 ! heart valve improper opening
+intersection_of: BFO:0000132 CVDO:0000525 ! part of occurrent right ventricular systole
+intersection_of: BFO:0000167 FMA:7246 ! has participant at all times Pulmonary valve
+
+[Term]
+id: CVDO:0000507
+name: tricuspid valve narrowed opening during right ventricular diastole
+intersection_of: CVDO:0000503 ! heart valve improper opening
+intersection_of: BFO:0000132 CVDO:0000523 ! part of occurrent right ventricular diastole
+intersection_of: BFO:0000167 FMA:7234 ! has participant at all times Tricuspid valve
+
+[Term]
+id: CVDO:0000508
+name: coronary heart disease with stable angina
+def: "A coronary heart disease leading to stable angina." []
+
+[Term]
+id: CVDO:0000509
+name: atherosclerotic acute coronary syndrome
+intersection_of: DOID:8805 ! acute coronary syndrome
+intersection_of: BFO:0000113 DOID:4248 ! has material basis at all times coronary stenosis
+property_value: CVDO:0000419 "An acute coronary syndrome due to coronary stenosis." xsd:string
+
+[Term]
+id: CVDO:0000510
+name: angina pectoris
+is_a: CVDO:0000556 ! heart ischemia
+property_value: CVDO:0000419 "A heart ischemia accompanied by pain." xsd:string
+property_value: CVDO:0000533 "Angina pectoris is sometimes taken to refer to the pain itself, rather than to the pathological process behind it." xsd:string
+
+[Term]
+id: CVDO:0000511
+name: stable angina pectoris
+is_a: CVDO:0000510 ! angina pectoris
+property_value: CVDO:0000419 "An angina that is not unstable." xsd:string
+
+[Term]
+id: CVDO:0000512
+name: unstable angina pectoris
+is_a: CVDO:0000510 ! angina pectoris
+property_value: CVDO:0000419 "An angina that worsens. It has at least one of these three features:\n1. it occurs at rest (or with minimal exertion), usually lasting >10 min\n2. it is severe and of new onset (i.e., within the prior 4–6 weeks)\n3. it occurs with a crescendo pattern (i.e., distinctly more severe, prolonged, or frequent than before)." xsd:string
+
+[Term]
+id: CVDO:0000513
+name: heart pathological process involving a mitral valve
+def: "A heart pathological process that has a mitral valve as a participant." []
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+intersection_of: BFO:0000167 FMA:7235 ! has participant at all times Mitral valve
+
+[Term]
+id: CVDO:0000514
+name: heart pathological process involving an aortic valve
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+intersection_of: BFO:0000167 FMA:7236 ! has participant at all times Aortic valve
+property_value: CVDO:0000419 "A heart pathological process that has an aortic valve as a participant." xsd:string
+
+[Term]
+id: CVDO:0000515
+name: heart pathological process involving a tricuspid valve
+def: "A heart pathological process that has a tricuspid valve as a participant." []
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+intersection_of: BFO:0000167 FMA:7234 ! has participant at all times Tricuspid valve
+
+[Term]
+id: CVDO:0000516
+name: heart pathological process involving a pulmonary valve
+def: "A heart pathological process that has a pulmonary valve as a participant." []
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7088 ! occurs in Heart
+intersection_of: BFO:0000167 FMA:7246 ! has participant at all times Pulmonary valve
+
+[Term]
+id: CVDO:0000517
+name: heart valve leaflet displacement into a cardiac chamber during ventricular diastole
+intersection_of: CVDO:0000530 ! heart valve leaflet displacement into a cardiac chamber
+intersection_of: BFO:0000132 CVDO:0000519 ! part of occurrent ventricular diastole
+
+[Term]
+id: CVDO:0000518
+name: ventricular systole
+is_a: CVDO:0000542 ! heart bodily process
+relationship: BFO:0000167 FMA:7100 ! has participant at all times Cardiac ventricle
+
+[Term]
+id: CVDO:0000519
+name: ventricular diastole
+is_a: CVDO:0000542 ! heart bodily process
+relationship: BFO:0000167 FMA:7100 ! has participant at all times Cardiac ventricle
+
+[Term]
+id: CVDO:0000520
+name: atrial systole
+is_a: CVDO:0000542 ! heart bodily process
+
+[Term]
+id: CVDO:0000521
+name: atrial diastole
+is_a: CVDO:0000542 ! heart bodily process
+
+[Term]
+id: CVDO:0000522
+name: left ventricular diastole
+is_a: CVDO:0000519 ! ventricular diastole
+relationship: BFO:0000167 FMA:7101 ! has participant at all times Left ventricle
+
+[Term]
+id: CVDO:0000523
+name: right ventricular diastole
+is_a: CVDO:0000519 ! ventricular diastole
+relationship: BFO:0000167 FMA:7098 ! has participant at all times Right ventricle
+
+[Term]
+id: CVDO:0000524
+name: left ventricular systole
+is_a: CVDO:0000518 ! ventricular systole
+relationship: BFO:0000167 FMA:7101 ! has participant at all times Left ventricle
+
+[Term]
+id: CVDO:0000525
+name: right ventricular systole
+is_a: CVDO:0000518 ! ventricular systole
+relationship: BFO:0000167 FMA:7098 ! has participant at all times Right ventricle
+
+[Term]
+id: CVDO:0000526
+name: left atrial systole
+is_a: CVDO:0000520 ! atrial systole
+
+[Term]
+id: CVDO:0000527
+name: right atrial systole
+is_a: CVDO:0000520 ! atrial systole
+
+[Term]
+id: CVDO:0000528
+name: left atrial diastole
+is_a: CVDO:0000521 ! atrial diastole
+
+[Term]
+id: CVDO:0000529
+name: right atrial diastole
+is_a: CVDO:0000521 ! atrial diastole
+
+[Term]
+id: CVDO:0000530
+name: heart valve leaflet displacement into a cardiac chamber
+def: "A pathological process of a heart valve being displaced into a cardiac chamber." []
+is_a: CVDO:0000210 ! heart valve improper close
+relationship: BFO:0000066 FMA:7088 ! occurs in Heart
+relationship: BFO:0000167 FMA:7110 ! has participant at all times Cardiac valve
+
+[Term]
+id: CVDO:0000531
+name: fluid in the pericardial cavity
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:9869 ! located in at all times Pericardium
+property_value: CVDO:0000419 "A disorder of fluid in the pericardial cavity." xsd:string
+
+[Term]
+id: CVDO:0000532
+name: blood in the pericardial cavity
+is_a: CVDO:0000531 ! fluid in the pericardial cavity
+property_value: CVDO:0000419 "A disorder of blood in the pericardial cavity." xsd:string
+
+[Term]
+id: CVDO:0000534
+name: heart conduction pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:83378 ! occurs in Conducting tissue of heart
+
+[Term]
+id: CVDO:0000535
+name: anomalous atrioventricular excitation (process)
+is_a: CVDO:0000310 ! cardiac arrhythmia (process)
+
+[Term]
+id: CVDO:0000536
+name: ventricular preexcitation (disease)
+
+[Term]
+id: CVDO:0000537
+name: cardiac ion channels disorder
+is_a: CVDO:0000047 ! heart conduction disorder
+property_value: CVDO:0000419 "A disorder in the heart conduction system that causes a disturbed function of ion channel subunits or the proteins that regulate them." xsd:string
+
+[Term]
+id: CVDO:0000538
+name: pulmonary valve prolapse
+property_value: CVDO:0000419 "A disease characterized by the displacement of a degenerated pulmonary valve leaflet into the right ventricle during diastole." xsd:string
+
+[Term]
+id: CVDO:0000539
+name: impaired anterior division of left branch of atrioventricular bundle
+is_a: CVDO:0000047 ! heart conduction disorder
+
+[Term]
+id: CVDO:0000540
+name: ventricular tachyarrhythmia (disease)
+
+[Term]
+id: CVDO:0000541
+name: inflammation process in a heart valve
+intersection_of: CVDO:0000403 ! pathological inflammation process
+intersection_of: BFO:0000066 FMA:7110 ! occurs in Cardiac valve
+property_value: CVDO:0000419 "An inflammation process occurring in a heart valve." xsd:string
+
+[Term]
+id: CVDO:0000542
+name: heart bodily process
+is_a: OGMS:0000060 ! bodily process
+
+[Term]
+id: CVDO:0000543
+name: genetic dilated cardiomyopathy
+intersection_of: DOID:12930 ! dilated cardiomyopathy
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A dilated cardiomyopathy that has a genetic origin." xsd:string
+
+[Term]
+id: CVDO:0000544
+name: genetic cardiomyopathy
+intersection_of: CVDO:0000569 ! cardiomyopathy (2008 definition)
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A cardiomyopathy (2008) that has a genetic origin." xsd:string
+
+[Term]
+id: CVDO:0000545
+name: embolus
+comment: A disorder made of a detached, traveling intravascular matter (solid, liquid, or gaseous) carried by circulation. It is capable of creating an arterial occlusion at a site distant from its point of origin.
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:3710 ! located in at all times Vascular tree
+
+[Term]
+id: CVDO:0000546
+name: inflammatory disease
+property_value: CVDO:0000419 "A disease characterized by an inflammation process." xsd:string
+
+[Term]
+id: CVDO:0000547
+name: myocardium pathological process
+comment: A pathological process occurring in the myocardium.
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:9462 ! occurs in Myocardium
+
+[Term]
+id: CVDO:0000548
+name: aorta pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:3734 ! occurs in Aorta
+property_value: CVDO:0000419 "A pathological process involving or occuring in the aorta." xsd:string
+
+[Term]
+id: CVDO:0000549
+name: aorta disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:3734 ! located in at all times Aorta
+property_value: CVDO:0000419 "A disorder always located in the aorta." xsd:string
+
+[Term]
+id: CVDO:0000550
+name: endocardium pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7280 ! occurs in Endocardium
+property_value: CVDO:0000419 "A pathological process occuring in the endocardium." xsd:string
+
+[Term]
+id: CVDO:0000551
+name: endocardium thickening
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:7280 ! occurs in Endocardium
+property_value: CVDO:0000419 "A pathological process of thickening of the endocardium." xsd:string
+
+[Term]
+id: CVDO:0000552
+name: endocardium disease
+comment: A disease affecting the endocardium.
+
+[Term]
+id: CVDO:0000553
+name: left ventricle disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7101 ! located in at all times Left ventricle
+property_value: CVDO:0000419 "A disorder always located in the left heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000554
+name: right ventricle disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7098 ! located in at all times Right ventricle
+property_value: CVDO:0000419 "A disorder always located in the right heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000555
+name: heart ventricle disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7100 ! located in at all times Cardiac ventricle
+property_value: CVDO:0000419 "A disorder always located in a heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000556
+name: heart ischemia
+is_a: DOID:326 ! ischemia
+property_value: CVDO:0000419 "An ischemia of the heart." xsd:string
+
+[Term]
+id: CVDO:0000557
+name: vein pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:50723 ! occurs in Vein
+
+[Term]
+id: CVDO:0000558
+name: ischemic cardiomyopathy
+is_a: DOID:3394 ! ischemic heart disease
+property_value: CVDO:0000419 "An ischemic heart disease leading to a dilatation and dysfunction of the left ventricle." xsd:string
+
+[Term]
+id: CVDO:0000559
+name: material anatomical entity disorder
+comment: A disorder located in an anatomical entity.
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:67165 ! located in at all times Material anatomical entity
+
+[Term]
+id: CVDO:0000560
+name: material anatomical entity pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:67165 ! occurs in Material anatomical entity
+
+[Term]
+id: CVDO:0000562
+name: cardiovascular system disorder
+is_a: OGMS:0000045 ! disorder
+intersection_of: OGMS:0000045 ! disorder
+intersection_of: BFO:0000082 FMA:7161 ! located in at all times Cardiovascular system
+
+[Term]
+id: CVDO:0000563
+name: cardiovascular system pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7161 ! occurs in Cardiovascular system
+
+[Term]
+id: CVDO:0000564
+name: disease of material anatomical entity
+comment: A disease that affects a material anatomical entity.
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: CVDO:0000567
+name: valvular cardiomyopathy
+is_a: OGMS:0000031 ! disease
+relationship: BFO:0000113 CVDO:0000500 ! has material basis at all times aortic valve disorder
+property_value: CVDO:0000419 "An aortic valve stenosis leading to a hypertrophy or dilatation of the left ventricle and its dysfunction." xsd:string
+
+[Term]
+id: CVDO:0000569
+name: cardiomyopathy (2008 definition)
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A heart disease in which the heart muscle is structurally and functionally abnormal, in the absence of coronary artery disease, hypertension, valvular disease and congenital heart disease sufficient to cause the observed myocardial abnormality.\n(adapted from Elliott et al., 2008, European Heart Journal, 29, 270-276)" xsd:string
+property_value: CVDO:0000533 "Contemporary (e.g. Elliott et al. 2008) definitions of cardiomyopathy exclude ischemic cardiomyopathy, hypertensive cardiomyopathy and valvular cardiomyopathy." xsd:string
+
+[Term]
+id: CVDO:0000570
+name: left ventricular myocardium contraction dysfunctional process
+intersection_of: CVDO:0000571 ! myocardium contraction dysfunctional process
+intersection_of: BFO:0000066 FMA:9558 ! occurs in Myocardium of left ventricle
+
+[Term]
+id: CVDO:0000571
+name: myocardium contraction dysfunctional process
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:9462 ! occurs in Myocardium
+
+[Term]
+id: CVDO:0000575
+name: left ventricle pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7101 ! occurs in Left ventricle
+property_value: CVDO:0000533 "A pathological process occurring in the left heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000576
+name: right ventricle pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7098 ! occurs in Right ventricle
+property_value: CVDO:0000419 "A pathological process occurring in the right heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000577
+name: inflammatory dilated cardiomyopathy
+synonym: "inflammatory dilated cardiomyopathy" EXACT []
+is_a: DOID:12930 ! dilated cardiomyopathy
+disjoint_from: CVDO:0000579 ! congenital heart disease
+property_value: CVDO:0000419 "\"Inflammatory DCM is defined by the presence of chronic inflammatory cells in association with left ventricular dilatation and reduced ejection fraction\".\n(Elliott et al., 2008)" xsd:string
+
+[Term]
+id: CVDO:0000578
+name: hypertensive cardiomyopathy
+is_a: DOID:11516 ! hypertensive heart disease
+property_value: CVDO:0000419 "A hypertensive heart disease leading to a hypertrophy and dysfunction of the left ventricle." xsd:string
+
+[Term]
+id: CVDO:0000579
+name: congenital heart disease
+is_a: DOID:114 ! heart disease
+disjoint_from: DOID:0050431 ! arrhythmogenic right ventricular dysplasia
+disjoint_from: DOID:11516 ! hypertensive heart disease
+property_value: CVDO:0000419 "A heart disease existing at birth, or developping during the first month after birth." xsd:string
+
+[Term]
+id: CVDO:0000580
+name: heart ventricle disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease affecting a heart ventricle." xsd:string
+
+[Term]
+id: CVDO:0000581
+name: left ventricle disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease affecting a heart left ventricle." xsd:string
+
+[Term]
+id: CVDO:0000582
+name: right ventricle disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease affecting a heart right ventricle." xsd:string
+
+[Term]
+id: CVDO:0000583
+name: ventricular myocardium contraction dysfunctional process
+intersection_of: CVDO:0000571 ! myocardium contraction dysfunctional process
+intersection_of: BFO:0000066 FMA:12151 ! occurs in Myocardium of ventricle
+
+[Term]
+id: CVDO:0000584
+name: right ventricular myocardium contraction dysfunctional process
+is_a: CVDO:0000571 ! myocardium contraction dysfunctional process
+intersection_of: CVDO:0000571 ! myocardium contraction dysfunctional process
+intersection_of: BFO:0000066 FMA:9535 ! occurs in Myocardium of right ventricle
+
+[Term]
+id: CVDO:0000585
+name: myocardium of left ventricle stiffening
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:9558 ! occurs in Myocardium of left ventricle
+
+[Term]
+id: CVDO:0000586
+name: heart valve pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7110 ! occurs in Cardiac valve
+property_value: CVDO:0000419 "A pathological process occurring in a heart valve." xsd:string
+
+[Term]
+id: CVDO:0000587
+name: aortic valve pathological process
+is_a: OGMS:0000061 ! pathological bodily process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7236 ! occurs in Aortic valve
+property_value: CVDO:0000419 "A pathological process occurring in an aortic valve." xsd:string
+
+[Term]
+id: CVDO:0000588
+name: mitral valve pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7235 ! occurs in Mitral valve
+property_value: CVDO:0000419 "A pathological process occurring in a mitral valve." xsd:string
+
+[Term]
+id: CVDO:0000589
+name: tricuspid valve pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7234 ! occurs in Tricuspid valve
+property_value: CVDO:0000419 "A pathological process occurring in a tricuspid valve." xsd:string
+
+[Term]
+id: CVDO:0000590
+name: pulmonary valve pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:7246 ! occurs in Pulmonary valve
+property_value: CVDO:0000419 "A pathological process occurring in a pulmonary valve." xsd:string
+
+[Term]
+id: CVDO:0000591
+name: myocardium disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease affecting the myocardium." xsd:string
+
+[Term]
+id: CVDO:0000596
+name: genetic heart disease
+intersection_of: DOID:114 ! heart disease
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A heart disease that has a genetic disorder." xsd:string
+
+[Term]
+id: CVDO:0000597
+name: congenital disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease existing at birth, or developping during the first month after birth." xsd:string
+
+[Term]
+id: CVDO:0000599
+name: coronary artery pathological process
+intersection_of: OGMS:0000061 ! pathological bodily process
+intersection_of: BFO:0000066 FMA:49893 ! occurs in Coronary artery
+
+[Term]
+id: CVDO:0000600
+name: coronary artery smooth muscle constriction
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:49893 ! occurs in Coronary artery
+property_value: CVDO:0000533 "A pathological process of coronary artery smooth muscle constriction." xsd:string
+
+[Term]
+id: DOID:0000405 ! vascular tissue disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:0050431 ! arrhythmogenic right ventricular dysplasia
+is_a: OGMS:0000031 ! disease
+relationship: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A cardiomyopathy characterized by adipose and fibrosis infiltration in the right ventricular myocardium. It is caused by genetic defects of desmosomes (which are parts of the myocardium) and may result in arrhythmia." xsd:string
+
+[Term]
+id: DOID:0050451 ! Brugada syndrome
+is_a: CVDO:0000472 ! cardiac channelopathy
+relationship: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "A heart conduction disease that is characterised by abnormal electrocardiogram (ECG) findings and an increased risk of sudden cardiac death by ventricular tachyarrhytmia." xsd:string
+
+[Term]
+id: DOID:0050644 ! generalized arterial calcification of infancy
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:0050645 ! arterial tortuosity syndrome
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:0050650
+name: familial atrial fibrillation
+is_a: CVDO:0000092 ! atrial fibrillation (disease)
+relationship: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+property_value: CVDO:0000419 "An atrial fibrillation disease that has a genetic origin." xsd:string
+
+[Term]
+id: DOID:0050700 ! cardiomyopathy (1995 definition)
+property_value: CVDO:0000419 "Disease of the myocardium associated with cardiac dysfunction.\n(Report of the 1995 World Health Organization/International Society and Federation of Cardiology Task Force on the Definition and Classification of Cardiomyopathies)" xsd:string
+property_value: CVDO:0000533 "DOID label \"cardiomyopathy\" was changed." xsd:string
+
+[Term]
+id: DOID:0060000 ! infective endocarditis
+property_value: CVDO:0000419 "An endocarditis caused by infection." xsd:string
+
+[Term]
+id: DOID:0060068
+name: non-bacterial thrombotic endocarditis
+synonym: "marantic endocarditis" EXACT []
+property_value: CVDO:0000533 "DOID label 'marantic endocarditis' was changed in CVDO (non-bacterial thrombotic endocarditis is a more common name)." xsd:string
+
+[Term]
+id: DOID:10128 ! venous insufficiency
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:10230 ! aortic atherosclerosis
+
+[Term]
+id: DOID:10234 ! histoplasmosis pericarditis
+is_a: CVDO:0000036 ! fungal pericarditis
+
+[Term]
+id: DOID:10272
+name: left anterior fascicular block (disease)
+relationship: BFO:0000113 CVDO:0000539 ! has material basis at all times impaired anterior division of left branch of atrioventricular bundle
+property_value: CVDO:0000533 "DOID label changed to 'left anterior fascicular block (disease)' for symmetry reasons with 'left posterior fascicular block (disease)'" xsd:string
+
+[Term]
+id: DOID:10273 ! heart conduction disease
+property_value: CVDO:0000419 "A disease affecting the conducting tissue of the heart." xsd:string
+
+[Term]
+id: DOID:10314 ! endocarditis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of the endocardium." xsd:string
+
+[Term]
+id: DOID:10392 ! anomalous atrioventricular excitation (disease)
+property_value: CVDO:0000533 "DOID label 'anomalous atrioventricular excitation' was changed." xsd:string
+
+[Term]
+id: DOID:10556 ! supine hypotensive syndrome
+is_a: CVDO:0000234 ! compression disease
+
+[Term]
+id: DOID:10591 ! pre-eclampsia
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:10763 ! hypertension
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:10880 ! iliac vein thrombophlebitis
+is_a: DOID:3875 ! thrombophlebitis
+
+[Term]
+id: DOID:112 ! esophageal varix
+is_a: CVDO:0000214 ! vein disorder
+
+[Term]
+id: DOID:11312
+name: Mobitz II second degree atrioventricular block (disease)
+property_value: CVDO:0000533 "DOID label changed for homogeneization reasons." xsd:string
+
+[Term]
+id: DOID:114 ! heart disease
+property_value: CVDO:0000419 "A disease affecting the heart." xsd:string
+
+[Term]
+id: DOID:11482 ! hemopericardium
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:115 ! cardiac tamponade
+is_a: OGMS:0000031 ! disease
+relationship: BFO:0000113 CVDO:0000531 ! has material basis at all times fluid in the pericardial cavity
+property_value: CVDO:0000419 "A disease caused by the presence of fluid in the pericardial cavity (due to pericardial effusion), affecting negatively the heart's pumping function." xsd:string
+property_value: CVDO:0000533 "In CVDO, cardiac tamponade is defined as *being caused* by a pericardial effusion, rather than as *being* a pericardial effusion." xsd:string
+
+[Term]
+id: DOID:11502 ! mitral valve insufficiency
+property_value: CVDO:0000419 "A disease in which an abnormal structure in a mitral valve prevents it to close propertly during systole, occasioning a retrograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:11516 ! hypertensive heart disease
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:11563 ! retinal vasculitis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of a retinal artery." xsd:string
+
+[Term]
+id: DOID:11695 ! portal vein thrombosis
+intersection_of: CVDO:0000217 ! thrombosis
+intersection_of: BFO:0000066 FMA:66645 ! occurs in Portal vein
+property_value: CVDO:0000419 "A thrombosis that occurs in a portal vein." xsd:string
+
+[Term]
+id: DOID:11713 ! diabetic angiopathy
+is_a: CVDO:0000231 ! ischemic disease
+
+[Term]
+id: DOID:118 ! pericardial effusion
+
+[Term]
+id: DOID:11840 ! coronary artery vasospasm
+property_value: CVDO:0000419 "A coronary heart disease with coronary artery smooth muscle constriction." xsd:string
+
+[Term]
+id: DOID:11847 ! coronary thrombosis
+intersection_of: CVDO:0000217 ! thrombosis
+intersection_of: BFO:0000066 FMA:49893 ! occurs in Coronary artery
+property_value: CVDO:0000419 "A thrombosis occuring in a coronary artery." xsd:string
+
+[Term]
+id: DOID:11984 ! hypertrophic cardiomyopathy
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "\"A heart disease with increased ventricular wall thickness or mass in the absence of loading conditions (hypertension, valve disease) sufficient to cause the observed abnormality.\"\n(Elliott et al., 2008, European Heart Journal, 29, 270-276)" xsd:string
+
+[Term]
+id: DOID:12010 ! ischemic optic neuropathy
+is_a: CVDO:0000231 ! ischemic disease
+
+[Term]
+id: DOID:12282 ! femoral vein thrombophlebitis
+is_a: DOID:3875 ! thrombophlebitis
+
+[Term]
+id: DOID:12326 ! chronic pulmonary heart disease
+property_value: CVDO:0000419 "A cor pulmonale that has a chronic disease course during which the right ventricle becomes hypertrophied." xsd:string
+
+[Term]
+id: DOID:1287 ! cardiovascular system disease
+property_value: CVDO:0000419 "A disease affecting the cardiovascular system." xsd:string
+
+[Term]
+id: DOID:12929 ! endocardial fibroelastosis
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A heart disease in which the endocardium thickens by increase in the amount of supporting connective tissue and elastic fibers. It is usually associated with children two years old and younger. Its etiological cause is unknown." xsd:string
+
+[Term]
+id: DOID:12930 ! dilated cardiomyopathy
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A cardiomyopathy characterized by left ventricular dilatation and left ventricular systolic dysfunction in the absence of abnormal loading conditions (hypertension, valve disease) or coronary heart disease sufficient to cause global systolic impairment.\n(adapted from Elliott et al., 2008, European Heart Journal, 29, 270-276)" xsd:string
+
+[Term]
+id: DOID:12935 ! alcoholic cardiomyopathy
+is_a: DOID:12930 ! dilated cardiomyopathy
+property_value: CVDO:0000419 "A dilated cardiomyopathy resulting from alcohol intoxication." xsd:string
+
+[Term]
+id: DOID:13209 ! right bundle branch block (disease)
+relationship: BFO:0000113 CVDO:0000051 ! has material basis at all times impaired right branch of atrioventricular bundle
+
+[Term]
+id: DOID:13241 ! Behcet's disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:13834 ! rheumatic tricuspid valve disease
+is_a: CVDO:0000154 ! tricuspid valve disease
+
+[Term]
+id: DOID:13884 ! sick sinus syndrome
+is_a: DOID:10273 ! heart conduction disease
+relationship: BFO:0000113 CVDO:0000466 ! has material basis at all times impaired sinus node
+property_value: CVDO:0000419 "A heart conduction disease characterized by inappropriate sinus rates (e.g. sinus bradycardia or sinus pause)." xsd:string
+
+[Term]
+id: DOID:14121 ! blue toe syndrome
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:14265 ! pulmonary valve insufficiency
+property_value: CVDO:0000419 "A disease in which an abnormal structure in a pulmonary valve prevents it to close propertly during diastole, occasioning a retrograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:14557 ! primary pulmonary hypertension
+is_a: DOID:6432 ! pulmonary hypertension
+
+[Term]
+id: DOID:1461 ! cholesterol embolism
+is_a: CVDO:0000225 ! embolism
+property_value: CVDO:0000419 "An embolism due to an embolus made of cholesterol." xsd:string
+
+[Term]
+id: DOID:1712 ! aortic valve stenosis
+property_value: CVDO:0000419 "A disease in which some disorder of the aortic valve leads prevents it from opening properly during left ventricular systole, occasioning disturbance in the anterograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:1754 ! mitral valve stenosis
+property_value: CVDO:0000419 "A disease in which some disorder of a mitral valve prevents it from opening properly during left ventricular diastole, occasioning disturbance in the anterograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:178 ! vascular disease
+property_value: CVDO:0000419 "A disease affecting a blood vessel." xsd:string
+property_value: CVDO:0000533 "Reorganization of the vascular diseases, and writing of Aristotelian definitions, is still ongoing." xsd:string
+
+[Term]
+id: DOID:1787 ! pericarditis
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease characterized by an inflammation of the pericardium." xsd:string
+
+[Term]
+id: DOID:1869 ! chronic rheumatic pericarditis
+property_value: CVDO:0000419 "A chronic pericarditis due to rheumatic fever." xsd:string
+
+[Term]
+id: DOID:1929 ! supravalvular aortic stenosis
+is_a: CVDO:0000597 ! congenital disease
+property_value: CVDO:0000419 "A congenital disease involving the narrowing (stenosis) of aorta, hindering the opening of the aortic valve." xsd:string
+property_value: CVDO:0000533 "Supravalvular aortic stenosis is not classified as an aortic valve stenosis: although the narrowing of the section of the aorta at the exit of the aortic valve implies some improper opening of the aortic valve, the aortic valve is (in general) healthy (there is no disorder nor pathological process inside it). However, this improper opening of the aortic valve is a pathological process that happens inside the heart; therefore, supravalvular aortic stenosis is classified as a heart disease." xsd:string
+
+[Term]
+id: DOID:1936 ! atherosclerosis
+is_a: DOID:2349 ! arteriosclerosis
+
+[Term]
+id: DOID:224 ! transient cerebral ischemia
+intersection_of: DOID:2316 ! brain ischemia
+intersection_of: BFO:0000132 OGMS:0000066 ! part of occurrent transient disease course
+property_value: CVDO:0000419 "A brain ischemia that is part of a transient disease course." xsd:string
+
+[Term]
+id: DOID:2349 ! arteriosclerosis
+is_a: DOID:2868 ! arterial occlusive disease
+
+[Term]
+id: DOID:2388 ! renal vascular disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:2403 ! aneurysm (disease)
+intersection_of: OGMS:0000031 ! disease
+intersection_of: BFO:0000113 CVDO:0000226 ! has material basis at all times aneurysm (disorder)
+property_value: CVDO:0000419 "A disposition that an aneurysm disorder will lead to pathological processes." xsd:string
+property_value: CVDO:0000533 "DOID label 'aneurysm disease' changed for homogeneization purpose in CVDO." xsd:string
+
+[Term]
+id: DOID:2462 ! retinal vascular disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:2494 ! angiodysplasia
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:255 ! hemangioma
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:272 ! hepatic vascular disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:2868 ! arterial occlusive disease
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:3103 ! thoracic outlet syndrome
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:325 ! spinal cord vascular disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:326 ! ischemia
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:3710 ! occurs in Vascular tree
+property_value: CVDO:0000419 "A pathological process of restriction in blood supply to tissues, causing a shortage of oxygen and glucose needed for cellular metabolism." xsd:string
+
+[Term]
+id: DOID:3363 ! coronary arteriosclerosis
+
+[Term]
+id: DOID:3393 ! coronary heart disease
+is_a: DOID:3394 ! ischemic heart disease
+property_value: CVDO:0000419 "An ischemic heart disease with narrowing of the coronary arteries." xsd:string
+
+[Term]
+id: DOID:3394 ! ischemic heart disease
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease characterized by reduced blood supply to the heart, occasioning pathological processes in the heart." xsd:string
+
+[Term]
+id: DOID:341 ! peripheral vascular disease
+is_a: CVDO:0000231 ! ischemic disease
+
+[Term]
+id: DOID:3410 ! carotid artery thrombosis
+relationship: BFO:0000066 FMA:3939 ! occurs in Common carotid artery
+property_value: CVDO:0000419 "A thrombosis occurring in a carotid artery." xsd:string
+
+[Term]
+id: DOID:3454 ! brain infarction
+comment: An infarction occurring in the brain.
+intersection_of: CVDO:0000276 ! infarction
+intersection_of: BFO:0000066 FMA:50801 ! occurs in Brain
+
+[Term]
+id: DOID:3455 ! cerebrovascular accident
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000066 FMA:45840 ! occurs in Arterial tree organ
+property_value: CVDO:0000419 "A pathological process of disturbance in the blood supply to the brain, causing a loss of brain function." xsd:string
+
+[Term]
+id: DOID:3572 ! intracranial sinus thrombosis
+relationship: BFO:0000066 FMA:50762 ! occurs in Dural venous sinus
+property_value: CVDO:0000419 "A thrombosis that occurs in a dural venous sinus." xsd:string
+
+[Term]
+id: DOID:3574 ! lateral sinus thrombosis
+is_a: DOID:3572 ! intracranial sinus thrombosis
+relationship: BFO:0000066 FMA:50763 ! occurs in Transverse sinus
+property_value: CVDO:0000419 "A thrombosis that occurs in a transverse sinus." xsd:string
+
+[Term]
+id: DOID:3669 ! intermittent claudication
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:3825 ! Shwartzman phenomenon
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:384 ! Wolff-Parkinson-White syndrome
+
+[Term]
+id: DOID:3875 ! thrombophlebitis
+is_a: OGMS:0000031 ! disease
+
+[Term]
+id: DOID:3951 ! acute myocarditis
+intersection_of: DOID:820 ! myocarditis
+intersection_of: BFO:0000054 OGMS:0000094 ! realized in acute disease course
+property_value: CVDO:0000419 "A myocarditis with an acute disease course." xsd:string
+
+[Term]
+id: DOID:396 ! Loeffler endocarditis
+
+[Term]
+id: DOID:397 ! restrictive cardiomyopathy
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A cardiomyopathy (2008) characterized by increased stiffness of the left ventricular myocardium and decreased compliance of the left ventricle (which is restricted from stretching and filling with blood properly), in the absence of dilated cardiomyopathy and hypertrophic cardiomyopathy." xsd:string
+
+[Term]
+id: DOID:4078 ! tricuspid valve stenosis
+property_value: CVDO:0000419 "A disease in which some disorder of a tricuspid valve prevents it from opening properly during right ventricular diastole, occasioning disturbance in the anterograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:4079 ! heart valve disease
+property_value: CVDO:0000419 "A disease affecting a valve of the heart." xsd:string
+
+[Term]
+id: DOID:4080 ! tricuspid valve insufficiency
+property_value: CVDO:0000419 "A disease in which an abnormal structure in a mitral valve prevents it to close propertly during systole, occasioning a retrograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:4193 ! intracranial thrombosis
+is_a: CVDO:0000217 ! thrombosis
+relationship: BFO:0000066 FMA:50801 ! occurs in Brain
+property_value: CVDO:0000419 "A thrombosis occurring in the brain." xsd:string
+
+[Term]
+id: DOID:4248 ! coronary stenosis
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:49893 ! located in at all times Coronary artery
+property_value: CVDO:0000419 "A disorder of atheromous plaques in a coronary artery." xsd:string
+
+[Term]
+id: DOID:4372 ! intracranial embolism
+is_a: CVDO:0000225 ! embolism
+
+[Term]
+id: DOID:4562 ! subacute bacterial endocarditis
+is_a: CVDO:0000010 ! bacterial endocarditis
+property_value: CVDO:0000419 "A bacterial endocarditis characterized by a slow process of infection." xsd:string
+
+[Term]
+id: DOID:471 ! skin hemangioma
+is_a: DOID:255 ! hemangioma
+
+[Term]
+id: DOID:484 ! vascular hemostatic disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:519 ! aortitis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of the aorta." xsd:string
+
+[Term]
+id: DOID:520 ! aortic disease
+property_value: CVDO:0000419 "A disease affecting the aorta." xsd:string
+
+[Term]
+id: DOID:5232 ! aortic valve prolapse
+property_value: CVDO:0000419 "A disease characterized by the displacement of a degenerated aortic valve leaflet into the left ventricle during diastole." xsd:string
+
+[Term]
+id: DOID:525 ! central nervous system vasculitis
+
+[Term]
+id: DOID:5453 ! pulmonary venoocclusive disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:5644 ! tricuspid valve prolapse
+property_value: CVDO:0000419 "A disease characterized by the displacement of a degenerated tricuspid valve leaflet into the right atrium during systole." xsd:string
+
+[Term]
+id: DOID:57 ! aortic valve insufficiency
+property_value: CVDO:0000419 "A disease in which an abnormal structure in an aortic valve prevents it to close propertly during diastole, occasioning a retrograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:5749 ! pulmonary valve disease
+property_value: CVDO:0000419 "A disease affecting the pulmonary valve of the heart." xsd:string
+
+[Term]
+id: DOID:5805 ! subvalvular aortic stenosis
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000533 "This refers to a narrowing of the section of the left ventricle below the aortic valve; therefore, this was not classified as an aortic valve stenosis in CVDO." xsd:string
+
+[Term]
+id: DOID:5844 ! myocardial infarction
+intersection_of: CVDO:0000276 ! infarction
+intersection_of: BFO:0000066 FMA:9462 ! occurs in Myocardium
+property_value: CVDO:0000419 "An infarction occurring in the myocardium." xsd:string
+
+[Term]
+id: DOID:6000 ! congestive heart failure
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease characterized by the inability of the heart to pump a sufficient amount of blood throughout the body." xsd:string
+
+[Term]
+id: DOID:61 ! mitral valve disease
+property_value: CVDO:0000419 "A disease affecting the mitral valve of the heart." xsd:string
+
+[Term]
+id: DOID:62 ! aortic valve disease
+property_value: CVDO:0000419 "A disease affecting the aortic valve of the heart." xsd:string
+
+[Term]
+id: DOID:630 ! genetic disease
+intersection_of: OGMS:0000031 ! disease
+intersection_of: BFO:0000113 OGMS:0000047 ! has material basis at all times genetic disorder
+
+[Term]
+id: DOID:6420 ! pulmonary valve stenosis
+property_value: CVDO:0000419 "A disease in which some disorder of a pulmonary valve prevents it from opening properly during right ventricular systole, occasioning disturbance in the anterograd blood flow through the valve." xsd:string
+
+[Term]
+id: DOID:6712 ! anterior spinal artery syndrome
+is_a: DOID:325 ! spinal cord vascular disease
+
+[Term]
+id: DOID:6713 ! cerebrovascular disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:682 ! compartment syndrome
+is_a: CVDO:0000231 ! ischemic disease
+
+[Term]
+id: DOID:799 ! varicose veins
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:820 ! myocarditis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of the myocardium." xsd:string
+
+[Term]
+id: DOID:8514 ! acute pulmonary heart disease
+equivalent_to: DOID:8517 ! acute cor pulmonale
+property_value: CVDO:0000419 "A cor pulmonale that has an acute disease course during which the right ventricle becomes dilated." xsd:string
+property_value: CVDO:0000533 "'Acute pulmonary heart disease' and 'Acute cor pulmonale' (two classes imported from DOID) are considered as equivalent in CVDO." xsd:string
+
+[Term]
+id: DOID:8515 ! cor pulmonale
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000419 "A disease characterized by a dilatation or hypertrophy of the myocardium of right ventricle of the heart as a response to increased resistance or high blood pressure in the lungs, involving a failure of the right side of the heart." xsd:string
+property_value: CVDO:0000533 "Although the 1995 classification of cardiomyopathies did not include cor pulmonale, it should have included it, given the definition of cardiomyopathy it adopted." xsd:string
+
+[Term]
+id: DOID:8516 ! pulmonary embolism and infarction
+is_a: OGMS:0000061 ! pathological bodily process
+relationship: BFO:0000117 CVDO:0000276 ! has occurrent part infarction
+relationship: BFO:0000117 DOID:9477 ! has occurrent part pulmonary embolism
+property_value: CVDO:0000419 "A pathological process consisting in a pulmonary embolism and an infarction that follows." xsd:string
+
+[Term]
+id: DOID:8517 ! acute cor pulmonale
+property_value: CVDO:0000533 "'Acute pulmonary heart disease' and 'Acute cor pulmonale' (two classes imported from DOID) are considered as equivalent in CVDO." xsd:string
+
+[Term]
+id: DOID:864 ! phlebitis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of a vein." xsd:string
+
+[Term]
+id: DOID:865 ! vasculitis
+property_value: CVDO:0000419 "A disease characterized by an inflammation of a blood vessel." xsd:string
+
+[Term]
+id: DOID:866 ! vein disease
+
+[Term]
+id: DOID:8725 ! vascular dementia
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:8805 ! acute coronary syndrome
+is_a: DOID:3393 ! coronary heart disease
+relationship: BFO:0000054 OGMS:0000094 ! realized in acute disease course
+property_value: CVDO:0000419 "A coronary heart disease with an acute disease course." xsd:string
+property_value: CVDO:0000533 "DOID label 'intermediate coronary syndrome' was changed." xsd:string
+
+[Term]
+id: DOID:8861 ! subvalvular pulmonary stenosis
+synonym: "pulmonary subvalvular stenosis" EXACT []
+is_a: OGMS:0000031 ! disease
+property_value: CVDO:0000533 "DOID label 'pulmonary subvalvular stenosis' was changed for homogeneization with 'subvalvular aortic stenosis'." xsd:string
+
+[Term]
+id: DOID:9286 ! priapism
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:9428 ! intracranial hypertension
+is_a: DOID:10763 ! hypertension
+
+[Term]
+id: DOID:9477 ! pulmonary embolism
+intersection_of: CVDO:0000225 ! embolism
+intersection_of: BFO:0000066 FMA:66326 ! occurs in Pulmonary artery
+property_value: CVDO:0000419 "An embolism that occurs in a pulmonary artery." xsd:string
+
+[Term]
+id: DOID:9540 ! vascular skin disease
+is_a: CVDO:0000267 ! vascular disease - unclassified by CVDO
+
+[Term]
+id: DOID:9768 ! heart aneurysm
+is_a: OGMS:0000045 ! disorder
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: DOID:988 ! mitral valve prolapse
+property_value: CVDO:0000419 "A disease characterized by the displacement of a degenerated mitral valve leaflet into the left atrium during systole." xsd:string
+
+[Term]
+id: DOID:989 ! heart valve prolapse
+property_value: CVDO:0000419 "A disease characterized by the displacement of a degenerated heart valve leaflet during systole." xsd:string
+
+[Term]
+id: DOID:9892 ! Marable's syndrome
+is_a: CVDO:0000234 ! compression disease
+
+[Term]
+id: FMA:12151 ! Myocardium of ventricle
+relationship: BFO:0000082 FMA:7100 ! located in at all times Cardiac ventricle
+
+[Term]
+id: FMA:13256 ! Wall of cardiac chamber
+relationship: BFO:0000082 FMA:7095 ! located in at all times Cardiac chamber
+
+[Term]
+id: FMA:3710 ! Vascular tree
+relationship: BFO:0000082 FMA:7161 ! located in at all times Cardiovascular system
+
+[Term]
+id: FMA:50722 ! Region of vascular tree organ
+relationship: BFO:0000082 FMA:3710 ! located in at all times Vascular tree
+
+[Term]
+id: FMA:67165 ! Material anatomical entity
+is_a: BFO:0000040 ! material entity
+property_value: CVDO:0000533 "This class was relocated as a son of BFO 'Material entity', and BFO 2.0 'located in at all times' relations were added between relevant FMA classes; they should ultimately be replaced by a genuine version of FMA using BFO 2.0 relations." xsd:string
+
+[Term]
+id: FMA:7088 ! Heart
+relationship: BFO:0000082 FMA:7161 ! located in at all times Cardiovascular system
+
+[Term]
+id: FMA:7095 ! Cardiac chamber
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: FMA:7110 ! Cardiac valve
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: FMA:7280 ! Endocardium
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: FMA:83378 ! Conducting tissue of heart
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: FMA:86044 ! Region of myocardium
+relationship: BFO:0000082 FMA:9462 ! located in at all times Myocardium
+
+[Term]
+id: FMA:86187 ! Segment of arterial tree organ
+relationship: BFO:0000082 FMA:45840 ! located in at all times Arterial tree organ
+
+[Term]
+id: FMA:86188 ! Segment of venous tree organ
+relationship: BFO:0000082 FMA:14284 ! located in at all times Venous tree organ
+
+[Term]
+id: FMA:9462 ! Myocardium
+relationship: BFO:0000082 FMA:7088 ! located in at all times Heart
+
+[Term]
+id: FMA:9535 ! Myocardium of right ventricle
+relationship: BFO:0000082 FMA:7098 ! located in at all times Right ventricle
+
+[Term]
+id: FMA:9558 ! Myocardium of left ventricle
+relationship: BFO:0000082 FMA:7101 ! located in at all times Left ventricle
+
+[Term]
+id: FMA:9869 ! Pericardium
+relationship: BFO:0000082 FMA:7161 ! located in at all times Cardiovascular system
+
+[Term]
+id: OGMS:0000031 ! disease
+is_a: BFO:0000016 ! disposition
+property_value: CVDO:0000419 "In order to obtain the taxonomy of diseases / disorders / pathological process in CVDO, it is necessary to use the reasoner first and to look at the inferred class hierarchy." xsd:string
+
+[Term]
+id: OGMS:0000045 ! disorder
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: OGMS:0000059 ! etiological process
+is_a: BFO:0000015 ! process
+
+[Term]
+id: OGMS:0000060 ! bodily process
+is_a: BFO:0000015 ! process
+
+[Term]
+id: OGMS:0000061 ! pathological bodily process
+is_a: OGMS:0000060 ! bodily process
+
+[Term]
+id: OGMS:0000063 ! disease course
+is_a: BFO:0000015 ! process
+
+[Term]
+id: OGMS:0000078 ! pathological anatomical structure
+is_a: BFO:0000040 ! material entity
+
+[Typedef]
+id: BFO:0000066 ! occurs in
+property_value: CVDO:0000533 "CVDO adds the property chain that if A occurs_in B and B located_in_at_all_times C, then A occurs_in C. This is used for a few inferences in the ontology, but CVDO can be used without problem without this property chain." xsd:string
+transitive_over: BFO:0000082 ! located in at all times
+
