@@ -10,14 +10,18 @@
      xmlns:doid="http://purl.obolibrary.org/obo/doid#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cvdo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/2020-03-05/cvdo.owl"/>
-        <dc:contributor>Adrien Barton</dc:contributor>
-        <dc:contributor>Arnaud Rosier</dc:contributor>
-        <dc:contributor>Jean-François Ethier</dc:contributor>
-        <dc:contributor>Paul Fabry</dc:contributor>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cvdo/2024-05-17/cvdo.owl"/>
+        <dc:creator>Adrien Barton</dc:creator>
+        <dc:creator>Arnaud Rosier</dc:creator>
+        <dc:creator>Jean-François Ethier</dc:creator>
+        <dc:creator>Paul Fabry</dc:creator>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title>Cardio Vascular Disease Ontology</terms:title>
         <rdfs:comment>CVDO is an ontology of cardiovascular diseases structured on OBO foundry’s principle and based on BFO. CVDO reorganizes and completes DOID cardiovascular diseases following OGMS tripartite model of disease, and builds its taxonomy of diseases largely by automatic reasoning.</rdfs:comment>
+        <owl:versionInfo>2024-05-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -257,9 +261,33 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/member -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/member"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -352,6 +380,12 @@
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
     
 
 
@@ -4243,12 +4277,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000169"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000176"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -4312,17 +4340,6 @@
             </owl:Restriction>
         </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/539"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000169"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/593"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
@@ -7109,12 +7126,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000148">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000118"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:BFO_0000179>0d-t-region</obo:BFO_0000179>
         <obo:BFO_0000180>ZeroDimensionalTemporalRegion</obo:BFO_0000180>
         <obo:IAO_0000112 xml:lang="en">a temporal region that is occupied by a process boundary</obo:IAO_0000112>
@@ -7128,17 +7139,6 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">zero-dimensional temporal region</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000118"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/121"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000600"/>
@@ -7193,7 +7193,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocarditis caused by bacterial infection.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An endocarditis caused by bacterial infection.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">bacterial endocarditis</rdfs:label>
     </owl:Class>
     
@@ -7203,7 +7203,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocarditis caused by viral infection.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An endocarditis caused by viral infection.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">viral endocarditis</rdfs:label>
     </owl:Class>
     
@@ -7213,7 +7213,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_0060000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocarditis caused by fungal infection.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An endocarditis caused by fungal infection.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">fungal endocarditis</rdfs:label>
     </owl:Class>
     
@@ -7294,7 +7294,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <obo:CVDO_0000419 xml:lang="en">A disorder always located in the pericardium.</obo:CVDO_0000419>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Since the pericardium is not a part of the heart according to FMA, pericardium disorder is not classified as a heart disorder.</obo:CVDO_0000533>
+        <obo:CVDO_0000533>Since the pericardium is not a part of the heart according to FMA, pericardium disorder is not classified as a heart disorder.</obo:CVDO_0000533>
         <rdfs:label xml:lang="en">pericardium disorder</rdfs:label>
     </owl:Class>
     
@@ -7936,8 +7936,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart conduction disease characterized by cardiac arrhythmia processes.</obo:CVDO_0000419>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Usual medical language does not differentiate the disease and the corresponding pathological process for the different kinds of cardiac arrhythmias. CVDO distinguishes them explicitly with the suffix &apos;(disease)&apos; or &apos;(process)&apos;.</obo:CVDO_0000533>
+        <obo:CVDO_0000419>A heart conduction disease characterized by cardiac arrhythmia processes.</obo:CVDO_0000419>
+        <obo:CVDO_0000533>Usual medical language does not differentiate the disease and the corresponding pathological process for the different kinds of cardiac arrhythmias. CVDO distinguishes them explicitly with the suffix &apos;(disease)&apos; or &apos;(process)&apos;.</obo:CVDO_0000533>
         <rdfs:label xml:lang="en">cardiac arrhythmia (disease)</rdfs:label>
     </owl:Class>
     
@@ -8161,7 +8161,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disorder always located in a heart valve.</obo:IAO_0000115>
+        <obo:IAO_0000115>A disorder always located in a heart valve.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart valve disorder</rdfs:label>
     </owl:Class>
     
@@ -8224,7 +8224,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease affecting the tricuspid valve of the heart.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disease affecting the tricuspid valve of the heart.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">tricuspid valve disease</rdfs:label>
     </owl:Class>
     
@@ -8240,7 +8240,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_7235"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A degenerated structure in a mitral valve leaflet due to myxomatous proliferation.</obo:IAO_0000115>
+        <obo:IAO_0000115>A degenerated structure in a mitral valve leaflet due to myxomatous proliferation.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">myxomatous degenerated structure in a mitral valve leaflet</rdfs:label>
     </owl:Class>
     
@@ -8264,7 +8264,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart pathological process that has a heart valve as a participant.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A heart pathological process that has a heart valve as a participant.</obo:CVDO_0000419>
         <obo:CVDO_0000533 xml:lang="en">This class should not be confused with &apos;heart valve pathological process&apos;, which are pathological processes occurring in a heart valve, rather than pathological process having as participant a heart valve.</obo:CVDO_0000533>
         <rdfs:label xml:lang="en">heart pathological process involving a heart valve</rdfs:label>
     </owl:Class>
@@ -8745,7 +8745,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_45840"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of an artery hardening.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of an artery hardening.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">artery hardening</rdfs:label>
     </owl:Class>
     
@@ -8761,7 +8761,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_50720"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of formation of atheromous plaques in an artery.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of formation of atheromous plaques in an artery.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">atheromous plaque formation in artery</rdfs:label>
     </owl:Class>
     
@@ -8873,7 +8873,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of dilatation of the myocardium of a right cardiac ventricle.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of dilatation of the myocardium of a right cardiac ventricle.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">right ventricular myocardium dilatation</rdfs:label>
     </owl:Class>
     
@@ -8895,7 +8895,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000226"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of an aneurysm rupturing.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of an aneurysm rupturing.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">aneurysm rupture</rdfs:label>
     </owl:Class>
     
@@ -8963,7 +8963,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A hypertrophic cardiomyopathy that has a genetic origin.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A hypertrophic cardiomyopathy that has a genetic origin.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">genetic hypertrophic cardiomyopathy</rdfs:label>
     </owl:Class>
     
@@ -9238,7 +9238,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of dilatation of the myocardium of a left cardiac ventricle.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of dilatation of the myocardium of a left cardiac ventricle.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">left ventricular myocardium dilatation</rdfs:label>
     </owl:Class>
     
@@ -9356,7 +9356,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">junctional tachycardia (disease)</rdfs:label>
+        <rdfs:label>junctional tachycardia (disease)</rdfs:label>
     </owl:Class>
     
 
@@ -9646,7 +9646,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of hypertrophy of the myocardium of a left cardiac ventricle.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of hypertrophy of the myocardium of a left cardiac ventricle.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">left ventricular myocardium hypertrophy</rdfs:label>
     </owl:Class>
     
@@ -9666,7 +9666,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of hypertrophy of the myocardium of a right cardiac ventricle.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of hypertrophy of the myocardium of a right cardiac ventricle.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">right ventricular myocardium hypertrophy</rdfs:label>
     </owl:Class>
     
@@ -9906,7 +9906,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_7110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disorder of degenerated structure in a heart valve leaflet.</obo:IAO_0000115>
+        <obo:IAO_0000115>A disorder of degenerated structure in a heart valve leaflet.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">degenerated structure in a heart valve leaflet</rdfs:label>
     </owl:Class>
     
@@ -10020,7 +10020,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mitral valve prolapse due to myxomatous proliferation in the mitral valve.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A mitral valve prolapse due to myxomatous proliferation in the mitral valve.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">Barlow&apos;s syndrome</rdfs:label>
     </owl:Class>
     
@@ -10036,8 +10036,8 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_9869"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process consisting in the abnormal accumulation of fluid in the pericardial cavity.</obo:CVDO_0000419>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process of pericardial effusion leads to the disorder &apos;fluid in the pericardial cavity&apos;.</obo:CVDO_0000533>
+        <obo:CVDO_0000419>A pathological process consisting in the abnormal accumulation of fluid in the pericardial cavity.</obo:CVDO_0000419>
+        <obo:CVDO_0000533>A process of pericardial effusion leads to the disorder &apos;fluid in the pericardial cavity&apos;.</obo:CVDO_0000533>
         <rdfs:label xml:lang="en">fluid accumulation in the pericardial cavity</rdfs:label>
     </owl:Class>
     
@@ -10053,7 +10053,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DOID_4248"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ischemic cardiomyopathy due to coronary stenosis.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An ischemic cardiomyopathy due to coronary stenosis.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">atherosclerotic ischemic cardiomyopathy</rdfs:label>
     </owl:Class>
     
@@ -10110,7 +10110,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000443">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000310"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sinus pause</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sinus pause</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sinoatrial arrest (process)</rdfs:label>
     </owl:Class>
     
@@ -10239,7 +10239,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of a coronary artery hardening.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process of a coronary artery hardening.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">coronary artery hardening</rdfs:label>
     </owl:Class>
     
@@ -10258,7 +10258,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000463">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000462"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accessory bundle that connects the atrium to a ventricle outside of the regular atrioventricular conduction system.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>Accessory bundle that connects the atrium to a ventricle outside of the regular atrioventricular conduction system.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">atrioventricular accessory bundle</rdfs:label>
     </owl:Class>
     
@@ -10293,7 +10293,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A sick sinus syndrome characterized by sinus pauses and/or bradycardia episodes alternating with sinus or atrial tachycardia episodes.</obo:IAO_0000115>
+        <obo:IAO_0000115>A sick sinus syndrome characterized by sinus pauses and/or bradycardia episodes alternating with sinus or atrial tachycardia episodes.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">tachycardia-bradycardia syndrome</rdfs:label>
     </owl:Class>
     
@@ -10352,7 +10352,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CVDO_0000473">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000472"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardiac channelopathy in which delayed repolarization of the heart following a heartbeat increases the risk of episodes of torsades de pointes. This is a rare disease.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A cardiac channelopathy in which delayed repolarization of the heart following a heartbeat increases the risk of episodes of torsades de pointes. This is a rare disease.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">long QT syndrome</rdfs:label>
     </owl:Class>
     
@@ -10440,7 +10440,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tachyarrhythmia (disease)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>tachyarrhythmia (disease)</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tachycardia (disease)</rdfs:label>
     </owl:Class>
     
@@ -10768,7 +10768,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process occurring in a cardiac chamber.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A pathological process occurring in a cardiac chamber.</obo:CVDO_0000419>
         <rdfs:label xml:lang="en">cardiac chamber pathological process</rdfs:label>
     </owl:Class>
     
@@ -10870,7 +10870,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_7110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of a heart valve improper opening.</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathological process of a heart valve improper opening.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart valve improper opening</rdfs:label>
     </owl:Class>
     
@@ -10992,7 +10992,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A coronary heart disease leading to stable angina.</obo:IAO_0000115>
+        <obo:IAO_0000115>A coronary heart disease leading to stable angina.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">coronary heart disease with stable angina</rdfs:label>
     </owl:Class>
     
@@ -11090,7 +11090,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart pathological process that has a mitral valve as a participant.</obo:IAO_0000115>
+        <obo:IAO_0000115>A heart pathological process that has a mitral valve as a participant.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart pathological process involving a mitral valve</rdfs:label>
     </owl:Class>
     
@@ -11138,7 +11138,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart pathological process that has a tricuspid valve as a participant.</obo:IAO_0000115>
+        <obo:IAO_0000115>A heart pathological process that has a tricuspid valve as a participant.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart pathological process involving a tricuspid valve</rdfs:label>
     </owl:Class>
     
@@ -11162,7 +11162,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart pathological process that has a pulmonary valve as a participant.</obo:IAO_0000115>
+        <obo:IAO_0000115>A heart pathological process that has a pulmonary valve as a participant.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart pathological process involving a pulmonary valve</rdfs:label>
     </owl:Class>
     
@@ -11347,7 +11347,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_7110"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathological process of a heart valve being displaced into a cardiac chamber.</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathological process of a heart valve being displaced into a cardiac chamber.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">heart valve leaflet displacement into a cardiac chamber</rdfs:label>
     </owl:Class>
     
@@ -12812,7 +12812,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An endocarditis caused by infection.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An endocarditis caused by infection.</obo:CVDO_0000419>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart disease involving inflammation of the endocardium (inner layer of the heart) caused by bacterial infection.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
@@ -12863,10 +12863,10 @@
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lschriml</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-04-13T03:14:26Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marantic endocarditis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>marantic endocarditis</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0060068</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-bacterial thrombotic endocarditis</rdfs:label>
+        <rdfs:label>non-bacterial thrombotic endocarditis</rdfs:label>
     </owl:Class>
     
 
@@ -13206,7 +13206,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID label &apos;anomalous atrioventricular excitation&apos; was changed.</obo:CVDO_0000533>
+        <obo:CVDO_0000533>DOID label &apos;anomalous atrioventricular excitation&apos; was changed.</obo:CVDO_0000533>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:426.7</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:155360000</oboInOwl:hasDbXref>
@@ -13639,7 +13639,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:10941</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracranial aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracranial aneurysm disease</rdfs:label>
+        <rdfs:label>intracranial aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -13690,7 +13690,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11138</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured thoracoabdominal aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured thoracoabdominal aortic aneurysm disease</rdfs:label>
+        <rdfs:label>ruptured thoracoabdominal aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -14422,7 +14422,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A heart disease with increased ventricular wall thickness or mass in the absence of loading conditions (hypertension, valve disease) sufficient to cause the observed abnormality.&quot;
+        <obo:CVDO_0000419>&quot;A heart disease with increased ventricular wall thickness or mass in the absence of loading conditions (hypertension, valve disease) sufficient to cause the observed abnormality.&quot;
 (Elliott et al., 2008, European Heart Journal, 29, 270-276)</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:425.1</oboInOwl:hasDbXref>
@@ -14529,7 +14529,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_12325">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_12326"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chronic pulmonary heart disease caused by a kyphoscoliosis.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A chronic pulmonary heart disease caused by a kyphoscoliosis.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:416.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:194886003</oboInOwl:hasDbXref>
@@ -14567,7 +14567,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cor pulmonale that has a chronic disease course during which the right ventricle becomes hypertrophied.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A cor pulmonale that has a chronic disease course during which the right ventricle becomes hypertrophied.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:416.8</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:194887007</oboInOwl:hasDbXref>
@@ -14779,7 +14779,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart disease in which the endocardium thickens by increase in the amount of supporting connective tissue and elastic fibers. It is usually associated with children two years old and younger. Its etiological cause is unknown.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A heart disease in which the endocardium thickens by increase in the amount of supporting connective tissue and elastic fibers. It is usually associated with children two years old and younger. Its etiological cause is unknown.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:425.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004695</oboInOwl:hasDbXref>
@@ -14823,7 +14823,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardiomyopathy characterized by left ventricular dilatation and left ventricular systolic dysfunction in the absence of abnormal loading conditions (hypertension, valve disease) or coronary heart disease sufficient to cause global systolic impairment.
+        <obo:CVDO_0000419>A cardiomyopathy characterized by left ventricular dilatation and left ventricular systolic dysfunction in the absence of abnormal loading conditions (hypertension, valve disease) or coronary heart disease sufficient to cause global systolic impairment.
 (adapted from Elliott et al., 2008, European Heart Journal, 29, 270-276)</obo:CVDO_0000419>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An intrinsic cardiomyopathy that results in damage to the myocardium causing the heart to pump blood inefficiently.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
@@ -14878,7 +14878,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_12932">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_397"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A restrictive cardiomyopathy which results in fibrous lesions of right and left ventricle. It occurs typically in tropical and subtropical Africa.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A restrictive cardiomyopathy which results in fibrous lesions of right and left ventricle. It occurs typically in tropical and subtropical Africa.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:425.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004719</oboInOwl:hasDbXref>
@@ -14906,7 +14906,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_12935">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_12930"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dilated cardiomyopathy resulting from alcohol intoxication.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A dilated cardiomyopathy resulting from alcohol intoxication.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:425.5</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D002310</oboInOwl:hasDbXref>
@@ -15509,7 +15509,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000466"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A heart conduction disease characterized by inappropriate sinus rates (e.g. sinus bradycardia or sinus pause).</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A heart conduction disease characterized by inappropriate sinus rates (e.g. sinus bradycardia or sinus pause).</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D012804</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C62244</oboInOwl:hasDbXref>
@@ -15548,7 +15548,7 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14004</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OMIM mapping confirmed by DO. [SN].</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thoracic aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thoracic aortic aneurysm disease</rdfs:label>
+        <rdfs:label>thoracic aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -15564,7 +15564,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14006</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splenic artery aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splenic artery aneurysm disease</rdfs:label>
+        <rdfs:label>splenic artery aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -15626,7 +15626,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_14172">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_6000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A congestive heart failure caused by a rheumatic fever.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A congestive heart failure caused by a rheumatic fever.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:398.91</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:82523003</oboInOwl:hasDbXref>
@@ -16935,7 +16935,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3362</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coronary aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coronary aneurysm disease</rdfs:label>
+        <rdfs:label>coronary aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -17149,7 +17149,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:342</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subclavian artery aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subclavian artery aneurysm disease</rdfs:label>
+        <rdfs:label>subclavian artery aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -17423,7 +17423,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:3627</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aortic aneurysm disease</rdfs:label>
+        <rdfs:label>aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -17633,7 +17633,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myocarditis with an acute disease course.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A myocarditis with an acute disease course.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:422</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:422.90</oboInOwl:hasDbXref>
@@ -17708,7 +17708,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardiomyopathy (2008) characterized by increased stiffness of the left ventricular myocardium and decreased compliance of the left ventricle (which is restricted from stretching and filling with blood properly), in the absence of dilated cardiomyopathy and hypertrophic cardiomyopathy.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A cardiomyopathy (2008) characterized by increased stiffness of the left ventricular myocardium and decreased compliance of the left ventricle (which is restricted from stretching and filling with blood properly), in the absence of dilated cardiomyopathy and hypertrophic cardiomyopathy.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D002313</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C62798</oboInOwl:hasDbXref>
@@ -17974,7 +17974,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FMA_49893"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disorder of atheromous plaques in a coronary artery.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disorder of atheromous plaques in a coronary artery.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D023921</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C80427</oboInOwl:hasDbXref>
@@ -18030,7 +18030,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_4562">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CVDO_0000010"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bacterial endocarditis characterized by a slow process of infection.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A bacterial endocarditis characterized by a slow process of infection.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D004698</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C34583</oboInOwl:hasDbXref>
@@ -18371,7 +18371,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_55">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_57"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aortic valve insufficiency due to rheumatic fever.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>An aortic valve insufficiency due to rheumatic fever.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:395.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:155283004</oboInOwl:hasDbXref>
@@ -18544,7 +18544,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease affecting the pulmonary valve of the heart.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disease affecting the pulmonary valve of the heart.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:424.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCI:C78579</oboInOwl:hasDbXref>
@@ -19008,7 +19008,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease affecting the mitral valve of the heart.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disease affecting the mitral valve of the heart.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:59</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:424.0</oboInOwl:hasDbXref>
@@ -19061,7 +19061,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease affecting the aortic valve of the heart.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disease affecting the aortic valve of the heart.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:56</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:395.9</oboInOwl:hasDbXref>
@@ -19311,7 +19311,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7682</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured aortic aneurysm disease</rdfs:label>
+        <rdfs:label>ruptured aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -19330,7 +19330,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7683</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dissecting aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dissecting aortic aneurysm disease</rdfs:label>
+        <rdfs:label>dissecting aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -19350,7 +19350,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7692</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured abdominal aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured abdominal aortic aneurysm disease</rdfs:label>
+        <rdfs:label>ruptured abdominal aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -19373,7 +19373,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7693</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal aortic aneurysm disease</rdfs:label>
+        <rdfs:label>abdominal aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -19395,7 +19395,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:7703</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured thoracic aortic aneurysm</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruptured thoracic aortic aneurysm disease</rdfs:label>
+        <rdfs:label>ruptured thoracic aortic aneurysm disease</rdfs:label>
     </owl:Class>
     
 
@@ -19511,7 +19511,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_8481">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_820"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A myocarditis caused by rheumatic fever.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A myocarditis caused by rheumatic fever.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14025</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:14036</oboInOwl:hasAlternativeId>
@@ -19631,8 +19631,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cor pulmonale that has an acute disease course during which the right ventricle becomes dilated.</obo:CVDO_0000419>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Acute pulmonary heart disease&apos; and &apos;Acute cor pulmonale&apos; (two classes imported from DOID) are considered as equivalent in CVDO.</obo:CVDO_0000533>
+        <obo:CVDO_0000419>A cor pulmonale that has an acute disease course during which the right ventricle becomes dilated.</obo:CVDO_0000419>
+        <obo:CVDO_0000533>&apos;Acute pulmonary heart disease&apos; and &apos;Acute cor pulmonale&apos; (two classes imported from DOID) are considered as equivalent in CVDO.</obo:CVDO_0000533>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:415</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:155324005</oboInOwl:hasDbXref>
@@ -19758,7 +19758,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;Acute pulmonary heart disease&apos; and &apos;Acute cor pulmonale&apos; (two classes imported from DOID) are considered as equivalent in CVDO.</obo:CVDO_0000533>
+        <obo:CVDO_0000533>&apos;Acute pulmonary heart disease&apos; and &apos;Acute cor pulmonale&apos; (two classes imported from DOID) are considered as equivalent in CVDO.</obo:CVDO_0000533>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:415.0</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:155325006</oboInOwl:hasDbXref>
@@ -19938,7 +19938,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:CVDO_0000419 xml:lang="en">A coronary heart disease with an acute disease course.</obo:CVDO_0000419>
-        <obo:CVDO_0000533 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID label &apos;intermediate coronary syndrome&apos; was changed.</obo:CVDO_0000533>
+        <obo:CVDO_0000533>DOID label &apos;intermediate coronary syndrome&apos; was changed.</obo:CVDO_0000533>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:411.1</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D000789</oboInOwl:hasDbXref>
@@ -20231,7 +20231,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9651">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_6000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A congestive heart failure with impaired ejection fraction.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A congestive heart failure with impaired ejection fraction.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:428.2</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:428.20</oboInOwl:hasDbXref>
@@ -20375,7 +20375,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9775">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_6000"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A congestive heart failure with preserved ejection fraction.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A congestive heart failure with preserved ejection fraction.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:428.3</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICD9CM:428.30</oboInOwl:hasDbXref>
@@ -20490,7 +20490,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A disease characterized by the displacement of a degenerated heart valve leaflet during systole.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A disease characterized by the displacement of a degenerated heart valve leaflet during systole.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH:D016127</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SNOMEDCT_2010_1_31:398995000</oboInOwl:hasDbXref>
@@ -20523,7 +20523,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_9997">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DOID_12930"/>
-        <obo:CVDO_0000419 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dilated cardiomyopathy resulting from a pregnancy. It presents typically between the last month of pregnancy and up to six months postpartum.</obo:CVDO_0000419>
+        <obo:CVDO_0000419>A dilated cardiomyopathy resulting from a pregnancy. It presents typically between the last month of pregnancy and up to six months postpartum.</obo:CVDO_0000419>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/doid.owl"/>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11697</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:11980</oboInOwl:hasAlternativeId>
