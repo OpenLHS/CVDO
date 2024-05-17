@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/CVDO/releases/2024-05-17/imports/ogms_import.owl" uri="src/imports/cvdo_ogms_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/CVDO/releases/2024-05-17/imports/fma_import.owl" uri="src/imports/cvdo_fma_import.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/CVDO/releases/2013-04-04/imports/doid_import.owl" uri="src/imports/cvdo_doid_import.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2014-05-03/bfo.owl" uri="src/imports/bfo.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/core-subset.owl" uri="src/imports/core-subset.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl" uri="src/imports/bfo_classes_only.owl"/>
